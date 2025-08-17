@@ -3072,7 +3072,7 @@ html {
 
 /* For mobile (phones) */
 @media (max-width: 576px) {
-
+    
     /* Your mobile-specific styles */
     .header_section .navbar .head_left .link_home .logo,
     .header_section .navbar .head_left .link_home .restaurant_Name {
@@ -3190,9 +3190,8 @@ html {
         font-size: 12px;
         width: 100px;
     }
-
     .menu_area {
-        height: 3010px;
+        /* height: 3010px; */
     }
 
     .menu_area .blog_menu {
@@ -3429,9 +3428,6 @@ html {
 
     .feedback_clients .swiper .swiper-wrapper .swiper-slide .profile .client_name {
         font-size: 14px;
-    }
-    .footer_section{
-        margin-top: 50px;
     }
 
     .footer_section .row .col-3 {
