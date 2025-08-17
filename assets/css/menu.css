@@ -1,0 +1,1791 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: bokor;
+    src: url(../font/Bokor/Bokor-Regular.ttf);
+}
+
+@font-face {
+    font-family: moulpali;
+    src: url(../font/Moulpali/Moulpali-Regular.ttf);
+}
+
+@font-face {
+    font-family: oswald;
+    src: url(../font/Oswald/Oswald-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: playwright_au_qLD;
+    src: url(../font/Playwrite_AU_QLD/PlaywriteAUQLD-VariableFont_wght.ttf);
+}
+
+body::selection {
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 205, 112);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ========== header_section ==========*/
+.header_section {
+    /* height: 100vh; */
+    background-image: url(../images/restaurant/hero-banner-about.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.header_section::after {
+    content: "";
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 1;
+    top: 0;
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+    position: relative;
+}
+
+/* ============= navbar =============*/
+.header_section .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+.header_section .navbar.animate__slideInDown {
+    animation-duration: 1s;
+}
+
+.header_section .navbar .head_left .link_home {
+    display: flex;
+    text-decoration: none;
+    color: orange;
+    font-family: moulpali;
+    gap: 7px;
+}
+
+.header_section .navbar .head_left .link_home .logo {
+    font-size: 50px;
+}
+
+.header_section .navbar .head_left .link_home .Restaurant_name {
+    font-size: 50px;
+}
+
+.header_section .navbar .head_right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.header_section .navbar .head_right .navbar_nav {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 30px;
+}
+
+.header_section .navbar .head_right .navbar_nav .nav_item:nth-child(4) .nav_link {
+    color: orange;
+}
+
+.header_section .navbar .head_right .navbar_nav .nav_item .nav_link {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: oswald;
+    font-weight: bolder;
+    transition: 0.2s;
+}
+
+.header_section .navbar .head_right .navbar_nav .nav_item:hover .nav_link {
+    color: orange;
+}
+
+/* Underline From Left */
+.header_section .navbar .head_right .navbar_nav .nav_item {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+}
+
+.header_section .navbar .head_right .navbar_nav .nav_item:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: -2px;
+    background: orange;
+    height: 2.5px;
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.header_section .navbar .head_right .navbar_nav .nav_item:hover:before,
+.header_section .navbar .head_right .navbar_nav .nav_item:focus:before,
+.header_section .navbar .head_right .navbar_nav .nav_item:active:before {
+    right: 0;
+}
+
+.header_section .navbar .head_right .btn_active {
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: oswald;
+    padding: 0 10px;
+    border: 2px solid transparent;
+    transition: 0.2s;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header_section .navbar .head_right .btn_active:hover {
+    background: none;
+    border: 2px solid orange;
+    box-shadow: 0 0 10px orange;
+}
+
+.header_section .navbar .head_right .main_menu {
+    display: none;
+    margin: auto;
+}
+
+.header_section .navbar .head_right .main_menu .btn_menu {
+    color: white;
+    background-color: orange;
+    padding: 9px 12px;
+    border-radius: 10px;
+    font-size: 20px;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.header_section .navbar .head_right .main_menu .checkbox {
+    display: none;
+}
+
+.header_section .navbar .head_right .main_menu .btn_menu:hover {
+    background: none;
+    border: 2px solid orange;
+    box-shadow: 0 0 10px orange;
+}
+
+.header_section .navbar .head_right .main_menu .checkbox:checked+.menu_list {
+    display: block;
+}
+
+.header_section .navbar .head_right .main_menu .menu_list {
+    position: absolute;
+    transition: 0.3s;
+    width: calc(100% + 20%);
+    top: 85px;
+    left: -30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 5px;
+    padding-bottom: 15px;
+    display: none;
+    border-top: 2px solid white;
+}
+
+.header_section .navbar .head_right .main_menu .menu_list .menu {
+    list-style-type: none;
+    /* padding-left: 30px; */
+}
+
+.header_section .navbar .head_right .main_menu .menu_list .menu .menu_item {
+    padding: 10px 0;
+}
+
+.header_section .navbar .head_right .main_menu .menu_list .menu .menu_item .menu_link {
+    text-decoration: none;
+    color: white;
+    font-family: oswald;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.header_section .navbar .head_right .main_menu .menu_list .menu .menu_item:nth-child(4) .menu_link {
+    color: orange;
+}
+
+.header_section .navbar .head_right .main_menu .menu_list .menu .menu_item .menu_link:hover {
+    color: orange;
+}
+/* Underline From Left */
+.header_section .navbar .head_right .main_menu .menu_list .menu .menu_item .menu_link {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+}
+
+.header_section .navbar .head_right .main_menu .menu_list .menu .menu_item .menu_link:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: -2px;
+    background: orange;
+    height: 2.5px;
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.header_section .navbar .head_right .main_menu .menu_list .menu .menu_item .menu_link:hover:before,
+.header_section .navbar .head_right .main_menu .menu_list .menu .menu_item .menu_link:focus:before,
+.header_section .navbar .head_right .main_menu .menu_list .menu .menu_item .menu_link:active:before {
+    right: 0;
+}
+
+.header_section .navbar .head_right .main_menu .menu_list .menu .active {
+    margin-top: 5px;
+}
+
+.header_section .navbar .head_right .navbar_nav .btn_active {
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: oswald;
+    padding: 0 10px;
+    border: 2px solid white;
+    transition: 0.3s;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 0 10px white;
+}
+
+.header_section .navbar .head_right .navbar_nav .btn_active:hover {
+    border: 2px solid orange;
+    box-shadow: 0 0 10px orange;
+}
+/* Sweep To Right */
+.header_section .navbar .head_right .navbar_nav .btn_active {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+.header_section .navbar .head_right .navbar_nav .btn_active:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  border-radius: 8px;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.header_section .navbar .head_right .navbar_nav .btn_active:hover, .header_section .navbar .head_right .navbar_nav .btn_active:focus, .header_section .navbar .head_right .navbar_nav .btn_active:active {
+  color: orange;
+}
+.header_section .navbar .head_right .navbar_nav .btn_active:hover:before, .header_section .navbar .head_right .navbar_nav .btn_active:focus:before, .header_section .navbar .head_right .navbar_nav .btn_active:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/* ============= hero_header ============= */
+.hero_header {
+    position: relative;
+    z-index: 2;
+    padding: 50px 0 170px;
+}
+
+.hero_header .animate__zoomIn {
+    animation-duration: 1s;
+}
+
+.hero_header h1 {
+    text-align: center;
+    font-size: 80px;
+    font-family: oswald;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.hero_header .breadcrumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    gap: 5px;
+}
+
+.hero_header .breadcrumb .breadcrumb-item {
+    color: white;
+    font-family: oswald;
+    font-size: 20px;
+}
+
+.hero_header .breadcrumb a {
+    color: white;
+    font-family: oswald;
+    font-size: 20px;
+    text-decoration: none;
+    color: orange;
+}
+
+.hero_header .breadcrumb a span {
+    color: white;
+    margin: 0 5px;
+}
+
+/* ========== fixed_btn =========== */
+.header_section .fixed_btn {
+    position: fixed;
+    z-index: 999;
+    bottom: 50px;
+    right: 50px;
+}
+
+.header_section .fixed_btn a {
+    background-color: orange;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+/* ================= main ================= */
+/* ========== menu_area ===========*/
+/* ========== menu_area ===========*/
+.menu_area {
+    margin: 100px 0 0 0;
+    position: relative;
+    height: 1290px;
+}
+
+.menu_area .blog_menu {
+    font-family: playwright_au_qLD;
+    font-weight: bolder;
+    color: orange;
+    font-weight: bolder;
+    font-size: 20px;
+    text-align: center;
+    display: block;
+}
+
+.menu_area .blog_menu::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: orange;
+    align-content: center;
+    top: 20px;
+    border-radius: 5px;
+    margin-left: -65px;
+}
+
+.menu_area .blog_menu::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: orange;
+    align-content: center;
+    top: 20px;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+
+.menu_area .title {
+    text-align: center;
+    font-family: oswald;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+.menu_area .menu {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid grey;
+    padding-bottom: 30px;
+    flex-wrap: wrap;
+    padding: 0;
+    padding-bottom: 20px;
+}
+
+.menu_area .menu .category {
+    width: 16.66%;
+    display: block;
+    text-align: center;
+    font-family: oswald;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 10px;
+    border-bottom: 2px solid transparent;
+}
+
+.menu_area .menu .category.active {
+    transition: border 0.5s;
+    border-bottom: 2px solid orange;
+}
+
+.menu_area .menu .category .icon {
+    color: orange;
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.menu_area .menu .option {
+    display: none;
+}
+
+.menu_area .menu .cambodia_food_list,
+.menu_area .menu .cambodia_dessert_list {
+    position: absolute;
+    width: 100%;
+    top: 115%;
+    display: none;
+    margin-inline: -20px;
+    padding: 0 20px;
+}
+
+.menu_area .menu .category:checked+.cambodia_food_list,
+.menu_area .menu .category:checked+.cambodia_dessert_list {
+    display: block;
+}
+
+.menu_area .menu .cambodia_food_list .row,
+.menu_area .menu .cambodia_dessert_list .row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-inline: -20px;
+}
+
+.menu_area .menu .cambodia_food_list .row .food_item,
+.menu_area .menu .cambodia_dessert_list .row .food_item {
+    width: 33.33%;
+    padding-inline: 20px;
+    margin-bottom: 40px;
+}
+
+.menu_area .menu .cambodia_food_list .row .food_item .card,
+.menu_area .menu .cambodia_dessert_list .row .food_item .card {
+    box-shadow: 0 0 20px rgb(200, 200, 200);
+    display: flex;
+    border-radius: 85px 10px;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.menu_area .menu .cambodia_food_list .row .food_item .card .food_image,
+.menu_area .menu .cambodia_dessert_list .row .food_item .card .food_image {
+    width: 40%;
+}
+
+.menu_area .menu .cambodia_food_list .row .food_item .card .food_image img,
+.menu_area .menu .cambodia_dessert_list .row .food_item .card .food_image img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 10px orange;
+}
+
+.menu_area .menu .cambodia_food_list .row .food_item .card .food_content,
+.menu_area .menu .cambodia_dessert_list .row .food_item .card .food_content {
+    width: 60%;
+    text-align: center;
+}
+
+.menu_area .menu .cambodia_food_list .row .food_item .card .food_content .head_food,
+.menu_area .menu .cambodia_dessert_list .row .food_item .card .food_content .head_food {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu_area .menu .cambodia_food_list .row .food_item .card .food_content .head_food .food_name,
+.menu_area .menu .cambodia_dessert_list .row .food_item .card .food_content .head_food .food_name {
+    font-family: bokor;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.menu_area .menu .cambodia_food_list .row .food_item .card .food_content .head_food .food_price,
+.menu_area .menu .cambodia_dessert_list .row .food_item .card .food_content .head_food .food_price {
+    color: orange;
+    font-family: oswald;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 5px orange;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.menu_area .menu .cambodia_food_list .row .food_item .card .food_content .food_number,
+.menu_area .menu .cambodia_dessert_list .row .food_item .card .food_content .food_number {
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu_area .menu .cambodia_food_list .row .food_item .card .food_content .food_number .btn_decrease,
+.btn_increase,
+.menu_area .menu .cambodia_dessert_list .row .food_item .card .food_content .food_number .btn_decrease,
+.btn_increase {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.menu_area .menu .cambodia_food_list .row .food_item .card .food_content .food_number .text_counter,
+.menu_area .menu .cambodia_dessert_list .row .food_item .card .food_content .food_number .text_counter {
+    width: 50px;
+    text-align: center;
+    border: 2px solid orange;
+    border-radius: 10px;
+    font-family: oswald;
+}
+
+.menu_area .menu .cambodia_food_list .row .food_item .card .food_content .order_btn,
+.menu_area .menu .cambodia_dessert_list .row .food_item .card .food_content .order_btn {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: oswald;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 5px orange;
+    transition: 0.5s;
+}
+
+.menu_area .menu .cambodia_food_list .row .food_item .card .food_content .order_btn:hover,
+.menu_area .menu .cambodia_dessert_list .row .food_item .card .food_content .order_btn:hover {
+    color: orange;
+    background: none;
+    box-shadow: 0 0 5px orange;
+}
+/* Buzz Out */
+@-webkit-keyframes hvr-buzz-out {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+@keyframes hvr-buzz-out {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+.menu_area .menu .cambodia_food_list .row .food_item .card .food_content .order_btn,
+.menu_area .menu .cambodia_dessert_list .row .food_item .card .food_content .order_btn
+ {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.menu_area .menu .cambodia_food_list .row .food_item .card .food_content .order_btn:hover, .menu_area .menu .cambodia_food_list .row .food_item .card .food_content .order_btn:focus, .menu_area .menu .cambodia_food_list .row .food_item .card .food_content .order_btn:active,
+.menu_area .menu .cambodia_dessert_list .row .food_item .card .food_content .order_btn:hover, .menu_area .menu .cambodia_dessert_list .row .food_item .card .food_content .order_btn:focus, .menu_area .menu .cambodia_dessert_list .row .food_item .card .food_content .order_btn:active
+ {
+  -webkit-animation-name: hvr-buzz-out;
+  animation-name: hvr-buzz-out;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+.menu_area .menu .europe_food_list,
+.menu_area .menu .europe_dessert_list,
+.menu_area .menu .drinks_list,
+.menu_area .menu .cocktails_list {
+    position: absolute;
+    width: 100%;
+    top: 115%;
+    display: none;
+    padding: 0 20px;
+}
+
+.menu_area .menu .category:checked+.europe_food_list,
+.menu_area .menu .category:checked+.europe_dessert_list,
+.menu_area .menu .category:checked+.drinks_list,
+.menu_area .menu .category:checked+.cocktails_list {
+    display: block;
+}
+
+.menu_area .menu .europe_food_list .row,
+.menu_area .menu .europe_dessert_list .row,
+.menu_area .menu .drinks_list .row,
+.menu_area .menu .cocktails_list .row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-inline: -20px;
+}
+
+.menu_area .menu .europe_food_list .row .food_item,
+.menu_area .menu .europe_dessert_list .row .food_item,
+.menu_area .menu .drinks_list .row .food_item,
+.menu_area .menu .cocktails_list .row .food_item {
+    width: 33.33%;
+    padding-inline: 20px;
+    margin-bottom: 40px;
+}
+
+.menu_area .menu .europe_food_list .row .food_item .card,
+.menu_area .menu .europe_dessert_list .row .food_item .card,
+.menu_area .menu .drinks_list .row .food_item .card,
+.menu_area .menu .cocktails_list .row .food_item .card {
+    box-shadow: 0 0 20px rgb(200, 200, 200);
+    display: flex;
+    border-radius: 85px 10px;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.menu_area .menu .europe_food_list .row .food_item .card .food_image,
+.menu_area .menu .europe_dessert_list .row .food_item .card .food_image,
+.menu_area .menu .drinks_list .row .food_item .card .food_image,
+.menu_area .menu .cocktails_list .row .food_item .card .food_image {
+    width: 40%;
+}
+
+.menu_area .menu .europe_food_list .row .food_item .card .food_image img,
+.menu_area .menu .europe_dessert_list .row .food_item .card .food_image img,
+.menu_area .menu .drinks_list .row .food_item .card .food_image img,
+.menu_area .menu .cocktails_list .row .food_item .card .food_image img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 10px orange;
+}
+
+.menu_area .menu .europe_food_list .row .food_item .card .food_content,
+.menu_area .menu .europe_dessert_list .row .food_item .card .food_content,
+.menu_area .menu .drinks_list .row .food_item .card .food_content,
+.menu_area .menu .cocktails_list .row .food_item .card .food_content {
+    width: 60%;
+    text-align: center;
+}
+
+.menu_area .menu .europe_food_list .row .food_item .card .food_content .head_food,
+.menu_area .menu .europe_dessert_list .row .food_item .card .food_content .head_food,
+.menu_area .menu .drinks_list .row .food_item .card .food_content .head_food,
+.menu_area .menu .cocktails_list .row .food_item .card .food_content .head_food {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu_area .menu .europe_food_list .row .food_item .card .food_content .head_food .food_name,
+.menu_area .menu .europe_dessert_list .row .food_item .card .food_content .head_food .food_name,
+.menu_area .menu .drinks_list .row .food_item .card .food_content .head_food .food_name,
+.menu_area .menu .cocktails_list .row .food_item .card .food_content .head_food .food_name {
+    font-family: oswald;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.menu_area .menu .europe_food_list .row .food_item .card .food_content .head_food .food_price,
+.menu_area .menu .europe_dessert_list .row .food_item .card .food_content .head_food .food_price,
+.menu_area .menu .drinks_list .row .food_item .card .food_content .head_food .food_price,
+.menu_area .menu .cocktails_list .row .food_item .card .food_content .head_food .food_price {
+    color: orange;
+    font-family: oswald;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 5px orange;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.menu_area .menu .europe_food_list .row .food_item .card .food_content .food_number,
+.menu_area .menu .europe_dessert_list .row .food_item .card .food_content .food_number,
+.menu_area .menu .drinks_list .row .food_item .card .food_content .food_number,
+.menu_area .menu .cocktails_list .row .food_item .card .food_content .food_number {
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu_area .menu .europe_food_list .row .food_item .card .food_content .food_number .btn_decrease,
+.btn_increase,
+.menu_area .menu .europe_dessert_list .row .food_item .card .food_content .food_number .btn_decrease,
+.btn_increase,
+.menu_area .menu .drinks_list .row .food_item .card .food_content .food_number .btn_decrease,
+.btn_increase,
+.menu_area .menu .cocktails_list .row .food_item .card .food_content .food_number .btn_decrease,
+.btn_increase {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.menu_area .menu .europe_food_list .row .food_item .card .food_content .food_number .text_counter,
+.menu_area .menu .europe_dessert_list .row .food_item .card .food_content .food_number .text_counter,
+.menu_area .menu .drinks_list .row .food_item .card .food_content .food_number .text_counter,
+.menu_area .menu .cocktails_list .row .food_item .card .food_content .food_number .text_counter {
+    width: 50px;
+    text-align: center;
+    border: 2px solid orange;
+    border-radius: 10px;
+    font-family: oswald;
+}
+
+.menu_area .menu .europe_food_list .row .food_item .card .food_content .order_btn,
+.menu_area .menu .europe_dessert_list .row .food_item .card .food_content .order_btn,
+.menu_area .menu .drinks_list .row .food_item .card .food_content .order_btn,
+.menu_area .menu .cocktails_list .row .food_item .card .food_content .order_btn {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: oswald;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 5px orange;
+    transition: 0.5s;
+}
+
+.menu_area .menu .europe_food_list .row .food_item .card .food_content .order_btn:hover,
+.menu_area .menu .europe_dessert_list .row .food_item .card .food_content .order_btn:hover,
+.menu_area .menu .drinks_list .row .food_item .card .food_content .order_btn:hover,
+.menu_area .menu .cocktails_list .row .food_item .card .food_content .order_btn:hover {
+    color: orange;
+    background: none;
+    border: none;
+    box-shadow: 0 0 5px orange;
+}
+/* Buzz Out */
+@-webkit-keyframes hvr-buzz-out {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+@keyframes hvr-buzz-out {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+.menu_area .menu .europe_food_list .row .food_item .card .food_content .order_btn,
+.menu_area .menu .europe_dessert_list .row .food_item .card .food_content .order_btn,
+.menu_area .menu .drinks_list .row .food_item .card .food_content .order_btn,
+.menu_area .menu .cocktails_list .row .food_item .card .food_content .order_btn
+ {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.menu_area .menu .europe_food_list .row .food_item .card .food_content .order_btn:hover, .menu_area .menu .europe_food_list .row .food_item .card .food_content .order_btn:focus, .menu_area .menu .europe_food_list .row .food_item .card .food_content .order_btn:active,
+.menu_area .menu .europe_dessert_list .row .food_item .card .food_content .order_btn:hover, .menu_area .menu .europe_dessert_list .row .food_item .card .food_content .order_btn:focus, .menu_area .menu .europe_dessert_list .row .food_item .card .food_content .order_btn:active,
+.menu_area .menu .drinks_list .row .food_item .card .food_content .order_btn:hover, .menu_area .menu .drinks_list .row .food_item .card .food_content .order_btn:focus, .menu_area .menu .drinks_list .row .food_item .card .food_content .order_btn:active,
+.menu_area .menu .cocktails_list .row .food_item .card .food_content .order_btn:hover, .menu_area .menu .cocktails_list .row .food_item .card .food_content .order_btn:focus, .menu_area .menu .cocktails_list .row .food_item .card .food_content .order_btn:active
+ {
+  -webkit-animation-name: hvr-buzz-out;
+  animation-name: hvr-buzz-out;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+/* ================== footer =================== */
+.footer_section {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 50px 0 30px;
+    overflow: hidden;
+}
+
+.footer_section .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer_section .row .col-3 .content h4 {
+    font-size: 20px;
+    font-family: playwright_au_qLD;
+    color: orange;
+    position: relative;
+}
+
+.footer_section .row .col-3 .content h4::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: orange;
+    align-content: center;
+    top: 50%;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+
+.footer_section .row .col-3 .content .company-list {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.footer_section .row .col-3 .content .company-list li {
+    margin-bottom: 10px;
+}
+
+.footer_section .row .col-3 .content .company-list li a {
+    color: white;
+    font-size: 16px;
+    font-family: oswald;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+.footer_section .row .col-3 .content .company-list li a i {
+    margin-right: 5px;
+    display: inline-block;
+    color: orange;
+}
+
+.footer_section .row .col-3 .content .contact-list {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.footer_section .row .col-3 .content .contact-list li {
+    margin-bottom: 10px;
+}
+
+.footer_section .row .col-3 .content .contact-list li a {
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    color: white;
+    font-size: 16px;
+    font-family: oswald;
+}
+
+.footer_section .row .col-3 .content .contact-list li a i {
+    margin-right: 5px;
+    display: inline-block;
+    color: orange;
+}
+
+.footer_section .row .col-3 .content .contact-list li .contact-icon {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    cursor: auto;
+    padding-top: 5px;
+}
+
+.footer_section .row .col-3 .content .contact-list li .contact-icon li i {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    align-content: center;
+    border-radius: 10px;
+    border: 1px solid white;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.footer_section .row .col-3 .content .contact-list li .contact-icon li:hover i {
+    background: white;
+    color: orange;
+    border-radius: 50%;
+}
+
+.footer_section .row .col-3 .content h5:first-of-type {
+    font-size: 16px;
+    font-family: oswald;
+    color: white;
+    margin-top: 20px;
+}
+
+.footer_section .row .col-3 .content h5:last-of-type {
+    font-size: 16px;
+    font-family: oswald;
+    color: white;
+    margin-top: 15px;
+}
+
+.footer_section .row .col-3 .content span {
+    font-size: 14px;
+    font-family: oswald;
+    color: white;
+    margin-top: 5px;
+    display: block;
+}
+
+.footer_section .row .col-3 .content .sign_up {
+    margin-top: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.footer_section .row .col-3 .content .sign_up input {
+    width: 100%;
+    outline: none;
+    padding: 10px 100px 10px 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    font-family: oswald;
+}
+
+.footer_section .row .col-3 .content .sign_up a {
+    position: absolute;
+    width: 60px;
+    font-size: 16px;
+    font-family: oswald;
+    color: white;
+    text-align: center;
+    padding: 3px;
+    border-radius: 10px;
+    top: 5px;
+    text-decoration: none;
+    right: 5px;
+    background-color: orange;
+}
+
+.footer_section .copyright {
+    border-top: 1px solid white;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.footer_section .copyright span {
+    color: white;
+    font-family: oswald;
+    text-align: center;
+    display: block;
+    font-size: 14px;
+}
+
+@media (max-width:1325px) {
+    .container {
+        padding-inline: 20px;
+    }
+
+
+    .menu_area {
+        margin: 50px 0 0 0;
+        height: 1780px;
+    }
+
+    .menu_area .menu .category {
+        width: 20%;
+    }
+
+    .menu_area .menu .cambodia_food_list .row .food_item,
+    .menu_area .menu .cambodia_dessert_list .row .food_item {
+        width: 460px;
+    }
+
+    .menu_area .menu .europe_food_list .row .food_item,
+    .menu_area .menu .europe_dessert_list .row .food_item,
+    .menu_area .menu .drinks_list .row .food_item,
+    .menu_area .menu .cocktails_list .row .food_item {
+        width: 40%;
+    }
+}
+
+/* For desktops */
+@media (max-width: 1200px) {
+
+    /* Slight tweaks for desktop */
+    .header_section .hero_header {
+        margin-top: 50px;
+    }
+
+    .header_section .hero_header .row .col_6 .hero_content .hero_title {
+        font-size: 70px;
+    }
+
+    .header_section .hero_header .row .col_6 .hero_content .hero_description {
+        font-size: 18px;
+    }
+
+    .menu_area {
+        height: 1750px;
+    }
+
+    .menu_area .title {
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+
+    .menu_area .menu .category {
+        width: 25%;
+    }
+
+    .menu_area .menu .cambodia_food_list .row .food_item,
+    .menu_area .menu .cambodia_dessert_list .row .food_item {
+        width: 460px;
+    }
+
+    .menu_area .menu .europe_food_list .row .food_item,
+    .menu_area .menu .europe_dessert_list .row .food_item,
+    .menu_area .menu .drinks_list .row .food_item,
+    .menu_area .menu .cocktails_list .row .food_item {
+        width: 45%;
+    }
+}
+
+/* For laptops */
+@media (max-width: 992px) {
+
+    /* Smaller navbar, font sizes */
+    .header_section {
+        height: auto;
+    }
+
+    .header_section::after {
+        height: 200vh;
+    }
+
+    .header_section .navbar .head_right .navbar_nav {
+        display: none;
+    }
+
+    .header_section .navbar .head_right .main_menu {
+        display: block;
+    }
+
+    .header_section .navbar .head_left .link_home .logo,
+    .header_section .navbar .head_left .link_home .Restaurant_name {
+        font-size: 45px;
+    }
+
+    .header_section .navbar .head_right .main_menu .menu_list .menu {
+        padding-left: 50px;
+    }
+
+    .header_section .hero_header .row {
+        flex-direction: column;
+        margin-bottom: 90px;
+    }
+
+    .header_section .hero_header .row .col_6:first-of-type {
+        width: 100%;
+        margin-top: 5px;
+        margin-left: 0;
+    }
+
+    .header_section .hero_header .row .col_6:last-of-type {
+        width: 75%;
+        margin: auto;
+        margin-top: -20px;
+    }
+
+    .header_section .hero_header .row .col_6 .hero_content {
+        width: 100%;
+
+        margin-left: 0;
+    }
+
+    .header_section .hero_header .row .col_6 .hero_content .hero_title {
+        font-size: 60px;
+        text-align: center;
+
+    }
+
+    .header_section .hero_header .row .col_6 .hero_content .hero_description {
+        text-align: center;
+    }
+
+    .header_section .fixed_btn {
+        bottom: 7%;
+        right: 5%;
+    }
+
+    .menu_area {
+        height: 3130px;
+    }
+
+    .menu_area .blog_menu {
+        font-size: 18px;
+    }
+
+    .menu_area .blog_menu::before {
+
+        top: 17px;
+    }
+
+    .menu_area .blog_menu::after {
+        top: 17px;
+    }
+
+    .menu_area .title {
+        font-size: 35px;
+        margin-bottom: 35px;
+    }
+
+    .menu_area .menu .category {
+        width: 33.33%;
+    }
+
+    .menu_area .menu .category {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .menu_area .menu .category .icon {
+        font-size: 28px;
+    }
+
+    .menu_area .menu .cambodia_food_list .row .food_item,
+    .menu_area .menu .cambodia_dessert_list .row .food_item {
+        width: 490px;
+    }
+
+    .menu_area .menu .europe_food_list .row .food_item,
+    .menu_area .menu .europe_dessert_list .row .food_item,
+    .menu_area .menu .drinks_list .row .food_item,
+    .menu_area .menu .cocktails_list .row .food_item {
+        width: 57%;
+    }
+
+    .footer_section .row .col-3 {
+        width: 40%;
+        margin-bottom: 30px;
+    }
+
+    .footer_section .row .col-3 .content h4 {
+        text-align: center;
+    }
+
+    .footer_section .row .col-3 .content h4::before {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 2px;
+        background-color: orange;
+        align-content: center;
+        top: 20px;
+        border-radius: 5px;
+        margin-left: -65px;
+    }
+
+}
+
+/* For tablets */
+@media (max-width: 768px) {
+
+    /* Adjust layout, stack columns */
+    .header_section .navbar .head_left .link_home .logo,
+    .header_section .navbar .head_left .link_home .Restaurant_name {
+        font-size: 40px;
+    }
+
+    .header_section .navbar .head_right .main_menu .menu_list .menu .menu_item .menu_link {
+        font-size: 16px;
+    }
+
+    .header_section .navbar .head_right .main_menu .menu_list .menu .active .btn_active {
+        font-size: 16px;
+    }
+
+    .header_section .navbar .head_right .main_menu .btn_menu {
+        padding: 8px 11px;
+        font-size: 18px;
+    }
+
+    .header_section .navbar .head_right .main_menu .menu_list {
+        top: 75px;
+    }
+
+    .header_section .navbar .head_right .main_menu .menu_list .menu {
+        padding-left: 40px;
+    }
+
+    .hero_header h1 {
+        font-size: 70px;
+    }
+
+    .hero_header .breadcrumb .breadcrumb-item {
+        font-size: 18px;
+    }
+
+    .hero_header .breadcrumb a {
+        font-size: 18px;
+    }
+
+    .header_section .hero_header .row .col_6 .hero_content .hero_title {
+        font-size: 50px;
+    }
+
+    .header_section .fixed_btn {
+        bottom: 6%;
+        right: 5%;
+    }
+
+    .menu_area {
+        height: 3170px;
+    }
+
+    .menu_area .blog_menu {
+        font-size: 16px;
+    }
+
+    .menu_area .blog_menu::before {
+
+        top: 15px;
+    }
+
+    .menu_area .blog_menu::after {
+        top: 15px;
+    }
+
+    .menu_area .title {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .menu_area .menu .category {
+        width: 50%;
+    }
+
+    .menu_area .menu .category {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .menu_area .menu .category .icon {
+        font-size: 26px;
+    }
+
+    .menu_area .menu .cambodia_food_list .row .food_item,
+    .menu_area .menu .cambodia_dessert_list .row .food_item {
+        width: 460px;
+    }
+
+    .menu_area .menu .cambodia_food_list .row .food_item .card .food_content .head_food .food_name,
+    .menu_area .menu .cambodia_dessert_list .row .food_item .card .food_content .head_food .food_name {
+        font-size: 18px;
+    }
+
+    .menu_area .menu .cambodia_food_list .row .food_item .card .food_content .order_btn,
+    .menu_area .menu .cambodia_dessert_list .row .food_item .card .food_content .order_btn {
+        font-size: 16px;
+    }
+
+    .menu_area .menu .europe_food_list .row .food_item,
+    .menu_area .menu .europe_dessert_list .row .food_item,
+    .menu_area .menu .drinks_list .row .food_item,
+    .menu_area .menu .cocktails_list .row .food_item {
+        width: 77%;
+    }
+
+    .menu_area .menu .europe_food_list .row .food_item .card .food_content .head_food .food_name,
+    .menu_area .menu .europe_dessert_list .row .food_item .card .food_content .head_food .food_name,
+    .menu_area .menu .drinks_list .row .food_item .card .food_content .head_food .food_name,
+    .menu_area .menu .cocktails_list .row .food_item .card .food_content .head_food .food_name {
+        font-size: 18px;
+    }
+
+    .menu_area .menu .europe_food_list .row .food_item .card .food_content .order_btn,
+    .menu_area .menu .europe_dessert_list .row .food_item .card .food_content .order_btn,
+    .menu_area .menu .drinks_list .row .food_item .card .food_content .order_btn,
+    .menu_area .menu .cocktails_list .row .food_item .card .food_content .order_btn {
+        font-size: 16px;
+    }
+
+    .footer_section .row .col-3 .content h4 {
+        text-align: start;
+        font-size: 18px;
+    }
+
+    .footer_section .row .col-3 .content h4::before {
+        content: "";
+        visibility: hidden;
+    }
+
+    .footer_section .row .col-3 .content .sign_up a {
+        font-size: 14px;
+        top: 7px;
+        right: 7px;
+    }
+
+    .footer_section .row .col-3 .content .contact-list li .contact-icon li i {
+        transition: 0.3s;
+        background: white;
+        color: orange;
+        border-radius: 50%;
+    }
+
+    .footer_section .row .col-3 .content .contact-list li .contact-icon li:hover i {
+        background: none;
+        border-radius: 10px;
+        color: white;
+        border: 1px solid white;
+    }
+}
+
+/* For mobile (phones) */
+@media (max-width: 576px) {
+
+    /* Your mobile-specific styles */
+    .header_section .navbar .head_left .link_home .logo,
+    .header_section .navbar .head_left .link_home .Restaurant_name {
+        font-size: 35px;
+    }
+
+    .header_section .navbar .head_right .main_menu .menu_list .menu .active .btn_active {
+        font-size: 14px;
+    }
+
+    .header_section .navbar .head_right .main_menu .btn_menu {
+        padding: 7px 9px;
+        font-size: 16px;
+    }
+
+    .header_section .navbar .head_right .main_menu .menu_list {
+        top: 65px;
+    }
+
+    .header_section .navbar .head_right .main_menu .menu_list .menu {
+        padding-left: 30px;
+    }
+
+    .hero_header h1 {
+        font-size: 60px;
+    }
+
+    .hero_header .breadcrumb .breadcrumb-item {
+        font-size: 16px;
+    }
+
+    .hero_header .breadcrumb a {
+        font-size: 16px;
+    }
+
+    .header_section .hero_header .row .col_6 .hero_content .hero_title {
+        font-size: 40px;
+        margin-top: 0px;
+    }
+
+    .header_section .hero_header .row .col_6 .hero_content .hero_description {
+        font-size: 16px;
+    }
+
+    .header_section .fixed_btn {
+        bottom: 5%;
+        right: 5%;
+    }
+
+    .menu_area {
+        height: 3070px;
+    }
+
+    .menu_area .blog_menu {
+        font-size: 14px;
+    }
+
+    .menu_area .blog_menu::before {
+
+        top: 15px;
+    }
+
+    .menu_area .blog_menu::after {
+        top: 15px;
+    }
+
+    .menu_area .title {
+        font-size: 25px;
+        margin-bottom: 25px;
+    }
+
+    .menu_area .menu .category {
+        width: 100%;
+    }
+
+    .menu_area .menu .category {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .menu_area .menu .category .icon {
+        font-size: 24px;
+    }
+
+
+    .menu_area .menu .category.active {
+        width: 50%;
+        transition: border 0.5s;
+    }
+
+    .menu_area .menu .cambodia_food_list .row .food_item,
+    .menu_area .menu .cambodia_dessert_list .row .food_item {
+        width: 460px;
+    }
+
+    .menu_area .menu .cambodia_food_list,
+    .menu_area .menu .cambodia_dessert_list {
+        margin-top: -40px;
+    }
+
+    .menu_area .menu .cambodia_food_list .row .food_item .card .food_image img,
+    .menu_area .menu .cambodia_dessert_list .row .food_item .card .food_image img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .menu_area .menu .cambodia_food_list .row .food_item .card .food_content .head_food .food_name,
+    .menu_area .menu .cambodia_dessert_list .row .food_item .card .food_content .head_food .food_name {
+        font-size: 16px;
+    }
+
+    .menu_area .menu .cambodia_food_list .row .food_item .card .food_content .head_food .food_price,
+    .menu_area .menu .cambodia_dessert_list .row .food_item .card .food_content .head_food .food_price {
+        font-size: 14px;
+    }
+
+    .menu_area .menu .cambodia_food_list .row .food_item .card .food_content .order_btn,
+    .menu_area .menu .cambodia_dessert_list .row .food_item .card .food_content .order_btn {
+        font-size: 14px;
+    }
+
+    .menu_area .menu .europe_food_list,
+.menu_area .menu .europe_dessert_list,
+.menu_area .menu .drinks_list,
+.menu_area .menu .cocktails_list {
+    margin-top: -40px;
+}
+    .menu_area .menu .europe_food_list .row .food_item,
+    .menu_area .menu .europe_dessert_list .row .food_item,
+    .menu_area .menu .drinks_list .row .food_item,
+    .menu_area .menu .cocktails_list .row .food_item {
+        width: 100%;
+    }
+
+    .menu_area .menu .europe_food_list .row .food_item .card .food_image img,
+    .menu_area .menu .europe_dessert_list .row .food_item .card .food_image img,
+    .menu_area .menu .drinks_list .row .food_item .card .food_image img,
+    .menu_area .menu .cocktails_list .row .food_item .card .food_image img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .menu_area .menu .europe_food_list .row .food_item .card .food_content .head_food .food_name,
+    .menu_area .menu .europe_dessert_list .row .food_item .card .food_content .head_food .food_name,
+    .menu_area .menu .drinks_list .row .food_item .card .food_content .head_food .food_name,
+    .menu_area .menu .cocktails_list .row .food_item .card .food_content .head_food .food_name {
+        font-size: 16px;
+    }
+
+    .menu_area .menu .europe_food_list .row .food_item .card .food_content .head_food .food_price,
+    .menu_area .menu .europe_dessert_list .row .food_item .card .food_content .head_food .food_price,
+    .menu_area .menu .drinks_list .row .food_item .card .food_content .head_food .food_price,
+    .menu_area .menu .cocktails_list .row .food_item .card .food_content .head_food .food_price {
+        font-size: 14px;
+    }
+
+    .menu_area .menu .europe_food_list .row .food_item .card .food_content .order_btn,
+    .menu_area .menu .europe_dessert_list .row .food_item .card .food_content .order_btn,
+    .menu_area .menu .drinks_list .row .food_item .card .food_content .order_btn,
+    .menu_area .menu .cocktails_list .row .food_item .card .food_content .order_btn {
+        font-size: 14px;
+    }
+
+    .footer_section .row .col-3 {
+        width: 100%;
+    }
+
+    .footer_section .row .col-3 .content {
+        width: 80%;
+        margin: auto;
+    }
+
+    .footer_section .row .col-3 .content h4 {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .footer_section .row .col-3 .content h4::before {
+        content: "";
+        visibility: visible;
+        position: absolute;
+        width: 50px;
+        height: 2px;
+        align-content: center;
+        top: 20px;
+        border-radius: 5px;
+        margin-left: -65px;
+    }
+
+    .footer_section .row .col-3 .content .contact-list li a {
+        font-size: 14px;
+    }
+
+
+    .footer_section .row .col-3 .content .company-list li a {
+        font-size: 14px;
+    }
+
+    .footer_section .row .col-3 .content .contact-list li .contact-icon li i {
+        transition: 0.3s;
+        background: white;
+        color: orange;
+        border-radius: 50%;
+    }
+
+    .footer_section .row .col-3 .content .contact-list li .contact-icon li:hover i {
+        background: none;
+        border-radius: 10px;
+        color: white;
+        border: 1px solid white;
+    }
+
+    .footer_section .row .col-3 .content .sign_up a {
+        font-size: 14px;
+        top: 7px;
+        right: 7px;
+    }
+
+    .footer_section .row .col-3 .content h5:first-of-type {
+        font-size: 14px;
+    }
+
+    .footer_section .row .col-3 .content h5:last-of-type {
+        font-size: 14px;
+    }
+
+    .footer_section .row .col-3 .content .contact-list li .contact-icon li i {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .footer_section .copyright span {
+        font-size: 12px;
+    }
+}

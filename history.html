@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>មរតក - Story</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="shortcut icon" href="assets/icons/bowl-food-solid-full.svg" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/history.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+</head>
+
+<body>
+  <section class="container" data-aos="fade-left" data-aos-duration="1000">
+    <span class="blog_about">About Us</span>
+    <h2 class="title">
+      Welcome to <i class="fa-solid fa-bowl-food"></i> <span class="restaurant_name">មរតក</span>
+    </h2>
+    <p class="description">
+      Morodok is a traditional Khmer restaurant devoted to preserving and sharing Cambodia’s cultural heritage through
+      authentic cuisine. We believe that food is not just nourishment but a story passed down through generations. Join
+      us for a culinary journey rich in flavor, tradition, and warm hospitality.
+    </p>
+
+    <div class="row">
+      <div class="experience">
+        <div class="number_count" id="experience">10</div>
+        <div class="letter">
+          <span>Year of</span>
+          <h5>EXPERIENCE</h5>
+        </div>
+      </div>
+      <div class="popular_chef">
+        <div class="number_count" id="popular_chef">15</div>
+        <div class="letter">
+          <span>Popular</span>
+          <h5>MASTER CHEF</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="link_read_more">
+      <a href="#about-full">READ MORE</a>
+    </div>
+  </section>
+
+  <section id="about-full" class="about_full_section" data-aos="fade-up" data-aos-duration="1200">
+    <div class="container">
+      <h2 class="section_title">Our Story at <i class="fa-solid fa-bowl-food"></i> <span
+          class="restaurant_name">មរតក</span></h2>
+
+      <p>
+        មរតក, meaning "heritage" in Khmer, is a tribute to the soul of Cambodia. Our vision is to preserve and honor
+        Khmer culinary traditions while inviting the world to experience the warmth, depth, and artistry of Cambodian
+        cuisine.
+      </p>
+
+      <h3 class="sub_title"><i class="fa-solid fa-quote-left"></i> A Culinary Heritage</h3>
+      <p>
+        Each dish we serve is crafted from recipes that have stood the test of time. From the royal flavors once served
+        in the palaces of the Khmer Empire to humble countryside meals rich in soul and simplicity, our food tells the
+        story of a nation.
+        <br><br>
+        Ingredients are locally sourced and prepared with deep respect for tradition — think fragrant lemongrass, creamy
+        coconut, fermented pastes, and hand-ground spices. Nothing is rushed. Every element is intentional.
+      </p>
+
+      <h3 class="sub_title"><i class="fa-solid fa-quote-left"></i> Ambience with Meaning</h3>
+      <p>
+        Our restaurant is designed to reflect Cambodia’s timeless charm. Traditional wooden architecture, hand-carved
+        decor, and soft traditional music create an atmosphere that invites reflection and appreciation. You don’t just
+        eat here — you journey through Khmer history with your senses.
+      </p>
+
+      <h3 class="sub_title"><i class="fa-solid fa-quote-left"></i> Our Master Chefs</h3>
+      <p>
+        The culinary team at មរតក includes master chefs with decades of experience. Trained in traditional techniques
+        and modern presentation, they create meals that honor the past and satisfy today's palate.
+        <br><br>
+        Our chefs don’t just cook — they tell stories through every dish.
+      </p>
+
+      <h3 class="sub_title"><i class="fa-solid fa-quote-left"></i> What Makes Us Different?</h3>
+      <ul class="about_list">
+        <li>Authentic Khmer recipes passed down through generations</li>
+        <li>Warm, personalized service with traditional hospitality</li>
+        <li>Premium, locally sourced ingredients</li>
+        <li>Cultural performances and seasonal culinary events</li>
+        <li>Community-focused mission to support local farmers and artisans</li>
+      </ul>
+
+      <h3 class="sub_title"><i class="fa-solid fa-quote-left"></i> For Locals & Travelers</h3>
+      <p>
+        Whether you're Cambodian and seeking a taste of home, or a traveler discovering our rich culture for the first
+        time — Morodok welcomes you. This is more than a meal; it’s a cultural experience served with care, love, and
+        respect.
+      </p>
+
+      <div class="about_footer_note">
+        <strong>Welcome to Morodok.</strong> Your seat is waiting, your journey begins here.
+      </div>
+    </div>
+  </section>
+
+</body>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+</script>
+
+</html>

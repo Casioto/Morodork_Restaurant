@@ -1,0 +1,1927 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: bokor;
+    src: url(../font/Bokor/Bokor-Regular.ttf);
+}
+
+@font-face {
+    font-family: moulpali;
+    src: url(../font/Moulpali/Moulpali-Regular.ttf);
+}
+
+@font-face {
+    font-family: oswald;
+    src: url(../font/Oswald/Oswald-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: playwright_au_qLD;
+    src: url(../font/Playwrite_AU_QLD/PlaywriteAUQLD-VariableFont_wght.ttf);
+}
+
+body::selection {
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 205, 112);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ========== header_section ==========*/
+.header_section {
+    background-image: url(../images/restaurant/hero-banner-about.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.header_section::after {
+    content: "";
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 1;
+    top: 0;
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+    position: relative;
+}
+
+/* ============= navbar =============*/
+.header_section .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+.header_section .navbar.animate__slideInDown {
+    animation-duration: 1s;
+}
+
+.header_section .navbar .head_left .link_home {
+    display: flex;
+    text-decoration: none;
+    color: orange;
+    font-family: moulpali;
+    gap: 7px;
+}
+
+.header_section .navbar .head_left .link_home .logo {
+    font-size: 50px;
+}
+
+.header_section .navbar .head_left .link_home .restaurant_Name {
+    font-size: 50px;
+}
+
+.header_section .navbar .head_right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.header_section .navbar .head_right .navbar_nav {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 30px;
+}
+
+.header_section .navbar .head_right .navbar_nav .nav_item:nth-child(2) .nav_link {
+    color: orange;
+}
+
+.header_section .navbar .head_right .navbar_nav .nav_item .nav_link {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: oswald;
+    font-weight: bolder;
+    transition: 0.2s;
+}
+
+.header_section .navbar .head_right .navbar_nav .nav_item:hover .nav_link {
+    color: orange;
+}
+
+/* Underline From Left */
+.header_section .navbar .head_right .navbar_nav .nav_item {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+}
+
+.header_section .navbar .head_right .navbar_nav .nav_item:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: -2px;
+    background: orange;
+    height: 2.5px;
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.header_section .navbar .head_right .navbar_nav .nav_item:hover:before,
+.header_section .navbar .head_right .navbar_nav .nav_item:focus:before,
+.header_section .navbar .head_right .navbar_nav .nav_item:active:before {
+    right: 0;
+}
+
+.header_section .navbar .head_right .btn_active {
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: oswald;
+    padding: 0 10px;
+    border: 2px solid transparent;
+    transition: 0.2s;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header_section .navbar .head_right .btn_active:hover {
+    background: none;
+    border: 2px solid orange;
+    box-shadow: 0 0 10px orange;
+}
+
+.header_section .navbar .head_right .main_menu {
+    display: none;
+    margin: auto;
+}
+
+.header_section .navbar .head_right .main_menu .btn_menu {
+    color: white;
+    background-color: orange;
+    padding: 9px 12px;
+    border-radius: 10px;
+    font-size: 20px;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.header_section .navbar .head_right .main_menu .checkbox {
+    display: none;
+}
+
+.header_section .navbar .head_right .main_menu .btn_menu:hover {
+    background: none;
+    border: 2px solid orange;
+    box-shadow: 0 0 10px orange;
+}
+
+.header_section .navbar .head_right .main_menu .checkbox:checked+.menu_list {
+    display: block;
+}
+
+.header_section .navbar .head_right .main_menu .menu_list {
+    position: absolute;
+    transition: 0.3s;
+    width: calc(100% + 20%);
+    top: 85px;
+    left: -30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 5px;
+    padding-bottom: 15px;
+    display: none;
+    border-top: 2px solid white;
+}
+
+.header_section .navbar .head_right .main_menu .menu_list .menu {
+    list-style-type: none;
+}
+
+.header_section .navbar .head_right .main_menu .menu_list .menu .menu_item {
+    padding: 10px 0;
+}
+
+.header_section .navbar .head_right .main_menu .menu_list .menu .menu_item .menu_link {
+    text-decoration: none;
+    color: white;
+    font-family: oswald;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.header_section .navbar .head_right .main_menu .menu_list .menu .menu_item:nth-child(2) .menu_link {
+    color: orange;
+}
+
+.header_section .navbar .head_right .main_menu .menu_list .menu .menu_item .menu_link:hover {
+    color: orange;
+}
+/* Underline From Left */
+.header_section .navbar .head_right .main_menu .menu_list .menu .menu_item .menu_link {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+}
+
+.header_section .navbar .head_right .main_menu .menu_list .menu .menu_item .menu_link:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: -2px;
+    background: orange;
+    height: 2.5px;
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.header_section .navbar .head_right .main_menu .menu_list .menu .menu_item .menu_link:hover:before,
+.header_section .navbar .head_right .main_menu .menu_list .menu .menu_item .menu_link:focus:before,
+.header_section .navbar .head_right .main_menu .menu_list .menu .menu_item .menu_link:active:before {
+    right: 0;
+}
+
+.header_section .navbar .head_right .main_menu .menu_list .menu .active {
+    margin-top: 5px;
+}
+
+.header_section .navbar .head_right .navbar_nav .btn_active {
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: oswald;
+    padding: 0 10px;
+    border: 2px solid white;
+    transition: 0.3s;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 0 10px white;
+}
+
+.header_section .navbar .head_right .navbar_nav .btn_active:hover {
+    border: 2px solid orange;
+    box-shadow: 0 0 10px orange;
+}
+/* Sweep To Right */
+.header_section .navbar .head_right .navbar_nav .btn_active {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+.header_section .navbar .head_right .navbar_nav .btn_active:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  border-radius: 8px;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.header_section .navbar .head_right .navbar_nav .btn_active:hover, .header_section .navbar .head_right .navbar_nav .btn_active:focus, .header_section .navbar .head_right .navbar_nav .btn_active:active {
+  color: orange;
+}
+.header_section .navbar .head_right .navbar_nav .btn_active:hover:before, .header_section .navbar .head_right .navbar_nav .btn_active:focus:before, .header_section .navbar .head_right .navbar_nav .btn_active:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/* ============= hero_header ============= */
+.hero_header {
+    position: relative;
+    z-index: 2;
+    padding: 50px 0 170px;
+}
+
+.hero_header .animate__zoomIn {
+    animation-duration: 1s;
+}
+
+.hero_header h1 {
+    text-align: center;
+    font-size: 80px;
+    font-family: oswald;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.hero_header .breadcrumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    gap: 5px;
+}
+
+.hero_header .breadcrumb .breadcrumb-item {
+    color: white;
+    font-family: oswald;
+    font-size: 20px;
+}
+
+.hero_header .breadcrumb a {
+    color: white;
+    font-family: oswald;
+    font-size: 20px;
+    text-decoration: none;
+    color: orange;
+}
+
+.hero_header .breadcrumb a span {
+    color: white;
+    margin: 0 5px;
+}
+
+/* ========== fixed_btn =========== */
+.header_section .fixed_btn {
+    position: fixed;
+    z-index: 999;
+    bottom: 50px;
+    right: 50px;
+}
+
+.header_section .fixed_btn a {
+    background-color: orange;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+/* ================= main ================= */
+.main_section {
+    overflow: hidden;
+}
+
+/* ========== about_section ===========*/
+.about_section {
+    margin: 100px 0;
+}
+
+.about_section .row {
+    width: 100%;
+}
+
+.about_section .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.about_section .row .col_6 {
+    width: 50%;
+}
+
+.about_section .row .col_6 .about_item .inside_restaurant {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.about_section .row .col_6 .about_item .inside_restaurant .picture {
+    width: calc(50% - 15px);
+    max-height: 240px;
+}
+
+.about_section .row .col_6 .about_item .inside_restaurant .picture img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.about_section .row .col_6 .about_item .inside_restaurant .picture:first-of-type img {
+    max-height: 240px;
+}
+
+.about_section .row .col_6 .about_item .inside_restaurant .picture:last-of-type img {
+    max-height: 240px;
+}
+
+.about_section .row .col_6 .about_item .inside_restaurant .picture:nth-child(2) {
+    align-content: flex-end;
+}
+
+.about_section .row .col_6 .about_item .inside_restaurant .picture:nth-child(2) img {
+    width: 80%;
+    margin-bottom: -4px;
+    max-height: 240px;
+}
+
+.about_section .row .col_6 .about_item .inside_restaurant .picture:nth-child(3) {
+    text-align: right;
+}
+
+.about_section .row .col_6 .about_item .inside_restaurant .picture:nth-child(3) img {
+    width: 80%;
+    max-height: 240px;
+}
+
+.about_section .row .col_6 .about_item .content {
+    width: 95%;
+    position: relative;
+}
+
+.about_section .row .col_6 .about_item .content .blog_about {
+    font-family: playwright_au_qLD;
+    font-weight: bolder;
+    color: orange;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.about_section .row .col_6 .about_item .content .blog_about::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: orange;
+    align-content: center;
+    top: 20px;
+    margin-left: 15px;
+    border-radius: 5px;
+}
+
+.about_section .row .col_6 .about_item .content .title {
+    font-size: 45px;
+    font-family: oswald;
+}
+
+.about_section .row .col_6 .about_item .content .title i {
+    color: orange;
+}
+
+.about_section .row .col_6 .about_item .content .title span {
+    color: orange;
+    font-family: moulpali;
+}
+
+.about_section .row .col_6 .about_item .content .description {
+    font-size: 18px;
+    font-family: oswald;
+    color: gray;
+    line-height: 2;
+    margin-top: -10px;
+}
+
+.about_section .row .col_6 .about_item .content .row {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 30px;
+}
+
+.about_section .row .col_6 .about_item .content .row .experience {
+    border-left: 4px solid orange;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 50%;
+}
+
+.about_section .row .col_6 .about_item .content .row .experience .number .number_count {
+    font-size: 50px;
+    color: orange;
+    font-weight: bold;
+}
+
+.about_section .row .col_6 .about_item .content .row .experience .letter span {
+    font-size: 16px;
+    color: gray;
+    font-family: oswald;
+}
+
+.about_section .row .col_6 .about_item .content .row .experience .letter h5 {
+    font-size: 16px;
+    font-family: oswald;
+}
+
+.about_section .row .col_6 .about_item .content .row .popular_chef {
+    border-left: 5px solid orange;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 50%;
+}
+
+.about_section .row .col_6 .about_item .content .row .popular_chef .number .number_count {
+    font-size: 50px;
+    color: orange;
+    font-weight: bold;
+}
+
+.about_section .row .col_6 .about_item .content .row .popular_chef .letter span {
+    font-size: 16px;
+    color: gray;
+    font-family: oswald;
+}
+
+.about_section .row .col_6 .about_item .content .row .popular_chef .letter h5 {
+    font-size: 16px;
+    font-family: oswald;
+}
+
+.about_section .row .col_6 .about_item .content .link_read_more a {
+    color: white;
+    text-decoration: none;
+    background-color: orange;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 30px;
+    font-family: oswald;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.5s;
+    box-shadow: 0 0 10px orange;
+    border: 2px solid transparent;
+}
+
+/* Radial Out */
+.about_section .row .col_6 .about_item .content .link_read_more a {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+  background: orange;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.about_section .row .col_6 .about_item .content .link_read_more a:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.about_section .row .col_6 .about_item .content .link_read_more a:hover, .about_section .row .col_6 .about_item .content .link_read_more a:focus, .about_section .row .col_6 .about_item .content .link_read_more a:active {
+  color: orange;
+}
+.about_section .row .col_6 .about_item .content .link_read_more a:hover:before, .about_section .row .col_6 .about_item .content .link_read_more a:focus:before, .about_section .row .col_6 .about_item .content .link_read_more a:active:before {
+  -webkit-transform: scale(2);
+  transform: scale(2);
+}
+
+/* ================= chef_area =================  */
+.chef_area {
+    margin-bottom: 100px;
+}
+
+/* ================= chef_area =================  */
+.chef_area .blog_chef {
+    display: block;
+    font-family: playwright_au_qLD;
+    font-size: 20px;
+    color: orange;
+    text-align: center;
+}
+
+.chef_area .blog_chef::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: orange;
+    align-content: center;
+    top: 20px;
+    border-radius: 5px;
+    margin-left: -65px;
+}
+
+.chef_area .blog_chef::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: orange;
+    align-content: center;
+    top: 20px;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+
+.chef_area .title {
+    font-size: 50px;
+    font-family: oswald;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.chef_area .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.chef_area .row .col_3 {
+    width: calc(25% - 30px);
+    min-width: 250px;
+}
+
+.chef_area .row .col_3 .card {
+    padding: 30px 0;
+    box-shadow: 0 0 30px rgb(220, 220, 220);
+    border-radius: 10% / 50%;
+    background-color: white;
+    position: relative;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.chef_area .row .col_3 .card:hover {
+    box-shadow: 0 0 30px rgb(150, 150, 150);
+    transform: scale(1.02) translateY(-10px);
+}
+
+.chef_area .row .col_3 .card .chef_image {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px;
+    border-radius: 10% / 50%;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+.chef_area .row .col_3 .card:hover .chef_image {
+    box-shadow: 0 0 10px orange;
+}
+
+.chef_area .row .col_3 .card .chef_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top right;
+    border-radius: 10% / 50%;
+    transition: all 0.5s ease;
+}
+.chef_area .row .col_3:last-of-type .card .chef_image img {
+    object-position: 0 -20px;
+}
+
+.chef_area .row .col_3 .card:hover .chef_image img {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
+.chef_area .row .col_3 .card .content .chef_name {
+    font-family: Oswald;
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.chef_area .row .col_3 .card .content .skill {
+    display: block;
+    font-family: Oswald;
+    font-size: 16px;
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.chef_area .row .col_3 .card .icon .list-icon {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    list-style-type: none;
+    margin-top: 15px;
+}
+
+.chef_area .row .col_3 .card .icon .list-icon .item .chef_link {
+    color: white;
+    background-color: orange;
+    font-size: 20px;
+    width: 35px;
+    display: inline-block;
+    height: 35px;
+    align-content: center;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px orange;
+    transition: 0.4s;
+}
+
+.chef_area .row .col_3 .card:hover .icon .list-icon .item .chef_link {
+    color: orange;
+    background: none;
+}
+
+.chef_area .row .col_3 .card:hover .icon .list-icon .item:hover .chef_link {
+    color: white;
+    background-color: orange;
+}
+
+/* Menu Button Styles */
+.chef_area .row .col_3 .card .menu_btn {
+    position: absolute;
+    top: 5px;
+    right: 25px;
+    background-color: orange;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 0 5px orange;
+    transition: 0.4s;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.chef_area .row .col_3 .card:hover .menu_btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.chef_area .row .col_3 .card .menu_btn:hover {
+    background-color: white;
+    color: orange;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn 0.4s;
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal_content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    animation: slideIn 0.3s ease;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modal_close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.modal_close:hover {
+    color: orange;
+}
+
+.modal_chef_image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.modal_chef_image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 5px 20px rgba(255, 165, 0, 0.3);
+}
+
+.modal_chef_name {
+    font-family: playwright_au_qLD;
+    font-size: 28px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.modal_chef_title {
+    text-align: center;
+    color: orange;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-family: Oswald;
+}
+
+.modal_section {
+    margin-bottom: 20px;
+}
+
+.modal_section h4 {
+    font-family: Oswald;
+    color: orange;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid orange;
+    padding-bottom: 5px;
+}
+
+.modal_section p {
+    line-height: 1.6;
+    color: gray;
+    font-family: Oswald;
+    margin-bottom: 10px;
+}
+
+.modal_section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.modal_section ul li {
+    padding: 5px 0;
+    color: gray;
+    border-bottom: 1px solid #eee;
+    font-family: Oswald;
+}
+
+.modal_section ul li:before {
+    content: "🏆 ";
+    margin-right: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================== footer =================== */
+.footer_section {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 50px 0 30px;
+    overflow: hidden;
+}
+
+.footer_section .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer_section .row .col-3 .content h4 {
+    font-size: 20px;
+    font-family: playwright_au_qLD;
+    color: orange;
+    position: relative;
+}
+
+.footer_section .row .col-3 .content h4::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: orange;
+    align-content: center;
+    top: 50%;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+
+.footer_section .row .col-3 .content .company-list {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.footer_section .row .col-3 .content .company-list li {
+    margin-bottom: 10px;
+}
+
+.footer_section .row .col-3 .content .company-list li a {
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    color: white;
+    font-size: 16px;
+    font-family: oswald;
+}
+
+.footer_section .row .col-3 .content .company-list li a i {
+    margin-right: 5px;
+    display: inline-block;
+    color: orange;
+}
+
+.footer_section .row .col-3 .content .contact-list {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.footer_section .row .col-3 .content .contact-list li {
+    margin-bottom: 10px;
+}
+
+.footer_section .row .col-3 .content .contact-list li a {
+    color: white;
+    font-size: 16px;
+    font-family: oswald;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+.footer_section .row .col-3 .content .contact-list li a i {
+    margin-right: 5px;
+    display: inline-block;
+    color: orange;
+}
+
+.footer_section .row .col-3 .content .contact-list li .contact-icon {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    cursor: auto;
+    padding-top: 5px;
+}
+
+.footer_section .row .col-3 .content .contact-list li .contact-icon li i {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    align-content: center;
+    border-radius: 10px;
+    border: 1px solid white;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.footer_section .row .col-3 .content .contact-list li .contact-icon li:hover i {
+    background: white;
+    color: orange;
+    border-radius: 50%;
+}
+
+.footer_section .row .col-3 .content h5:first-of-type {
+    font-size: 16px;
+    font-family: oswald;
+    color: white;
+    margin-top: 20px;
+}
+
+.footer_section .row .col-3 .content h5:last-of-type {
+    font-size: 16px;
+    font-family: oswald;
+    color: white;
+    margin-top: 15px;
+}
+
+.footer_section .row .col-3 .content span {
+    font-size: 14px;
+    font-family: oswald;
+    color: white;
+    margin-top: 5px;
+    display: block;
+}
+
+.footer_section .row .col-3 .content .sign_up {
+    margin-top: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.footer_section .row .col-3 .content .sign_up input {
+    width: 100%;
+    outline: none;
+    padding: 10px 100px 10px 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    font-family: oswald;
+}
+
+.footer_section .row .col-3 .content .sign_up a {
+    position: absolute;
+    width: 60px;
+    font-size: 16px;
+    font-family: oswald;
+    color: white;
+    text-align: center;
+    padding: 3px;
+    border-radius: 10px;
+    top: 5px;
+    right: 5px;
+    text-decoration: none;
+    background-color: orange;
+}
+
+.footer_section .copyright {
+    border-top: 1px solid white;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.footer_section .copyright span {
+    color: white;
+    font-family: oswald;
+    text-align: center;
+    display: block;
+    font-size: 14px;
+}
+
+@media (max-width:1325px) {
+    .container {
+        padding-inline: 20px;
+    }
+
+    .about_section {
+        margin: 50px 0;
+    }
+
+    .about_section .row .col_6 .about_item .content .title {
+        font-size: 40px;
+    }
+
+    .chef_area {
+        margin: 0;
+    }
+
+    .chef_area .row {
+        width: 800px;
+        margin: auto;
+    }
+
+    .chef_area .row .col_3 {
+        width: 50%;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: center;
+        /* margin-inline: -20px;
+    padding-inline: 0px; */
+
+    }
+
+    .chef_area .row .col_3 .card {
+        width: 300px;
+    }
+
+    .feedback_clients {
+        margin: 20px 0 50px;
+    }
+}
+
+/* For desktops */
+@media (max-width: 1200px) {
+
+    /* Slight tweaks for desktop */
+    .header_section .hero_header {
+        margin-top: 50px;
+    }
+
+    .header_section .fixed_btn {
+        bottom: 8%;
+        right: 5%;
+    }
+
+    .about_section .row {
+        flex-direction: column;
+    }
+
+    .about_section .row .col_6:first-of-type {
+        width: 80%;
+    }
+
+    .about_section .row .col_6 .about_item .inside_restaurant {
+        justify-content: center;
+    }
+
+    .about_section .row .col_6 .about_item .inside_restaurant .picture {
+        max-height: 280px;
+    }
+
+    .about_section .row .col_6 .about_item .inside_restaurant .picture:first-of-type img {
+        max-height: 280px;
+    }
+
+    .about_section .row .col_6 .about_item .inside_restaurant .picture:last-of-type img {
+        max-height: 280px;
+    }
+
+    .about_section .row .col_6 .about_item .inside_restaurant .picture:nth-child(2) img {
+        max-height: 280px;
+    }
+
+    .about_section .row .col_6 .about_item .inside_restaurant .picture:nth-child(3) img {
+        max-height: 280px;
+    }
+
+    .about_section .row .col_6 .about_item .inside_restaurant {
+        gap: 15px;
+    }
+
+    .about_section .row .col_6:last-of-type {
+        width: 100%;
+    }
+
+    .about_section .row .col_6 .about_item .content {
+        width: 100%;
+    }
+
+    .about_section .row .col_6 .about_item .content .row {
+        flex-direction: row;
+    }
+
+    .chef_area.title {
+        font-size: 40px;
+    }
+}
+
+/* For laptops */
+@media (max-width: 992px) {
+
+    /* Smaller navbar, font sizes */
+    .header_section {
+        height: auto;
+    }
+
+    .header_section::after {
+        height: 200vh;
+    }
+
+    .header_section .navbar .head_right .navbar_nav {
+        display: none;
+    }
+
+    .header_section .navbar .head_right .main_menu {
+        display: block;
+    }
+
+    .header_section .navbar .head_left .link_home .logo,
+    .header_section .navbar .head_left .link_home .restaurant_Name {
+        font-size: 45px;
+    }
+
+    .header_section .navbar .head_right .main_menu .menu_list .menu {
+        padding-left: 50px;
+    }
+
+    .header_section .hero_header .row {
+        flex-direction: column;
+        margin-bottom: 90px;
+    }
+
+    .header_section .hero_header .row .col_6:first-of-type {
+        width: 100%;
+        margin-top: 5px;
+        margin-left: 0;
+    }
+
+    .header_section .hero_header .row .col_6:last-of-type {
+        width: 75%;
+        margin: auto;
+        margin-top: -20px;
+    }
+
+    .header_section .hero_header .row .col_6 .hero_content {
+        width: 100%;
+
+        margin-left: 0;
+    }
+
+    .header_section .hero_header .row .col_6 .hero_content .hero_title {
+        font-size: 60px;
+        text-align: center;
+
+    }
+
+    .header_section .hero_header .row .col_6 .hero_content .hero_description {
+        text-align: center;
+    }
+
+    .header_section .fixed_btn {
+        bottom: 7%;
+        right: 5%;
+    }
+
+    .about_section .row {
+        width: 100%;
+    }
+
+    .about_section .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .about_section .row .col_6 {
+        width: 50%;
+    }
+
+    .about_section .row .col_6 .about_item .inside_restaurant {
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .about_section .row .col_6 .about_item .inside_restaurant .picture {
+        width: calc(50% - 15px);
+        max-height: 240px;
+    }
+
+    .about_section .row .col_6 .about_item .inside_restaurant .picture img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .about_section .row .col_6 .about_item .inside_restaurant .picture:first-of-type img {
+        max-height: 240px;
+    }
+
+    .about_section .row .col_6 .about_item .inside_restaurant .picture:last-of-type img {
+        max-height: 240px;
+    }
+
+    .about_section .row .col_6 .about_item .inside_restaurant .picture:nth-child(2) {
+        align-content: flex-end;
+    }
+
+    .about_section .row .col_6 .about_item .inside_restaurant .picture:nth-child(2) img {
+        width: 80%;
+        margin-bottom: -4px;
+        max-height: 240px;
+    }
+
+    .about_section .row .col_6 .about_item .inside_restaurant .picture:nth-child(3) {
+        text-align: right;
+    }
+
+    .about_section .row .col_6 .about_item .inside_restaurant .picture:nth-child(3) img {
+        width: 80%;
+        max-height: 240px;
+    }
+
+    .about_section .row .col_6 .about_item .content {
+        width: 95%;
+        position: relative;
+    }
+
+    .about_section .row .col_6 .about_item .content .blog_about {
+        font-family: playwright_au_qLD;
+        font-weight: bolder;
+        color: orange;
+        font-weight: bolder;
+        font-size: 20px;
+    }
+
+    .about_section .row .col_6 .about_item .content .blog_about::after {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 2px;
+        background-color: orange;
+        align-content: center;
+        top: 20px;
+        margin-left: 15px;
+        border-radius: 5px;
+    }
+
+    .about_section .row .col_6 .about_item .content .title {
+        font-size: 60px;
+        font-family: oswald;
+    }
+
+    .about_section .row .col_6 .about_item .content .title i {
+        color: orange;
+    }
+
+    .about_section .row .col_6 .about_item .content .title span {
+        color: orange;
+        font-family: moulpali;
+    }
+
+    .about_section .row .col_6 .about_item .content .description {
+        font-size: 18px;
+        font-family: oswald;
+        color: gray;
+        line-height: 2;
+        margin-top: -10px;
+    }
+
+    .about_section .row .col_6 .about_item .content .row {
+        display: flex;
+        gap: 100px;
+        margin-top: 30px;
+    }
+
+    .about_section .row .col_6 .about_item .content .row .experience {
+        border-left: 4px solid orange;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        width: 50%;
+    }
+
+    .about_section .row .col_6 .about_item .content .row .experience .number .number_count {
+        font-size: 50px;
+        color: orange;
+        font-weight: bold;
+    }
+
+    .about_section .row .col_6 .about_item .content .row .experience .letter span {
+        font-size: 16px;
+        color: gray;
+        font-family: oswald;
+    }
+
+    .about_section .row .col_6 .about_item .content .row .experience .letter h5 {
+        font-size: 16px;
+        font-family: oswald;
+    }
+
+    .about_section .row .col_6 .about_item .content .row .popular_chef {
+        border-left: 5px solid orange;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        width: 50%;
+    }
+
+    .about_section .row .col_6 .about_item .content .row .popular_chef .number .number_count {
+        font-size: 50px;
+        color: orange;
+        font-weight: bold;
+    }
+
+    .about_section .row .col_6 .about_item .content .row .popular_chef .letter span {
+        font-size: 16px;
+        color: gray;
+        font-family: oswald;
+    }
+
+    .about_section .row .col_6 .about_item .content .row .popular_chef .letter h5 {
+        font-size: 16px;
+        font-family: oswald;
+    }
+
+    .about_section .row .col_6 .about_item .content .link_read_more a {
+        color: white;
+        text-decoration: none;
+        background-color: orange;
+        border-radius: 10px;
+        padding: 10px 20px;
+        margin-top: 30px;
+        font-family: oswald;
+        display: inline-block;
+        font-weight: bold;
+        font-size: 20px;
+        transition: 0.3s;
+        box-shadow: 0 0 10px orange;
+        border: 2px solid transparent;
+    }
+
+    .about_section .row .col_6 .about_item .content .link_read_more a:hover {
+        color: orange;
+        background: none;
+    }
+
+    .chef_area .row {
+        width: 700px;
+    }
+
+    .chef_area .row .col_3 {
+        width: 50%;
+    }
+
+    .chef_area .blog_chef {
+        font-size: 18px;
+    }
+
+    .chef_area .blog_chef::before {
+        top: 17px;
+    }
+
+    .chef_area .blog_chef::after {
+        top: 17px;
+    }
+
+    .chef_area .title {
+        font-size: 35px;
+    }
+
+    .footer_section .row {
+        justify-content: center;
+    }
+
+    .footer_section .row .col-3 {
+        width: 40%;
+        margin-bottom: 30px;
+    }
+
+    .footer_section .row .col-3 .content h4 {
+        text-align: center;
+    }
+
+    .footer_section .row .col-3 .content h4::before {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 2px;
+        background-color: orange;
+        align-content: center;
+        top: 20px;
+        border-radius: 5px;
+        margin-left: -65px;
+    }
+
+}
+
+/* For tablets */
+@media (max-width: 768px) {
+
+    /* Adjust layout, stack columns */
+    .header_section .navbar .head_left .link_home .logo,
+    .header_section .navbar .head_left .link_home .restaurant_Name {
+        font-size: 40px;
+    }
+
+    .header_section .navbar .head_right .main_menu .menu_list .menu .menu_item .menu_link {
+        font-size: 16px;
+    }
+
+    .header_section .navbar .head_right .main_menu .menu_list .menu .active .btn_active {
+        font-size: 16px;
+    }
+
+    .header_section .navbar .head_right .main_menu .btn_menu {
+        padding: 8px 11px;
+        font-size: 18px;
+    }
+
+    .header_section .navbar .head_right .main_menu .menu_list {
+        top: 75px;
+    }
+
+    .header_section .navbar .head_right .main_menu .menu_list .menu {
+        padding-left: 40px;
+    }
+
+    .hero_header h1 {
+        font-size: 70px;
+    }
+
+    .hero_header .breadcrumb .breadcrumb-item {
+        font-size: 18px;
+    }
+
+    .hero_header .breadcrumb a {
+        font-size: 18px;
+    }
+
+    .header_section .fixed_btn {
+        bottom: 6%;
+        right: 5%;
+    }
+
+    .about_section .row .col_6:first-of-type {
+        width: 100%;
+    }
+
+    .about_section .row .col_6 .about_item .inside_restaurant {
+        justify-content: center;
+    }
+
+    .about_section .row .col_6 .about_item .inside_restaurant .picture {
+        max-height: 230px;
+    }
+
+    .about_section .row .col_6 .about_item .inside_restaurant .picture:first-of-type img {
+        max-height: 230px;
+    }
+
+    .about_section .row .col_6 .about_item .inside_restaurant .picture:last-of-type img {
+        max-height: 230px;
+    }
+
+    .about_section .row .col_6 .about_item .inside_restaurant .picture:nth-child(2) img {
+        max-height: 230px;
+    }
+
+    .about_section .row .col_6 .about_item .inside_restaurant .picture:nth-child(3) img {
+        max-height: 230px;
+    }
+
+    .about_section .row .col_6 .about_item .inside_restaurant {
+        gap: 10px;
+    }
+
+    .about_section .row .col_6 .about_item .content .blog_about {
+        font-size: 16px;
+    }
+
+    .about_section .row .col_6 .about_item .content .blog_about::after {
+
+        top: 15px;
+    }
+
+    .about_section .row .col_6 .about_item .content .title {
+        font-size: 35px;
+    }
+
+    .about_section .row .col_6 .about_item .content .description {
+        font-size: 16px;
+    }
+
+    .about_section .row .col_6 .about_item .content .link_read_more a {
+        font-size: 16px;
+    }
+
+    .chef_area .row {
+        width: 350px;
+    }
+
+    .chef_area .row .col_3 {
+        width: 100%;
+    }
+
+    .chef_area .blog_chef {
+        font-size: 16px;
+    }
+
+    .chef_area .blog_chef::before {
+        top: 15px;
+    }
+
+    .chef_area .blog_chef::after {
+        top: 15px;
+    }
+
+    .chef_area .title {
+        font-size: 30px;
+    }
+
+    .chef_area .row .col_3 .card .chef_image img {
+        width: 230px;
+        height: 230px;
+    }
+
+    .chef_area .row .col_3 .card {
+        width: 90%;
+    }
+
+    .footer_section .row .col-3 .content h4 {
+        text-align: start;
+        font-size: 18px;
+    }
+
+    .footer_section .row .col-3 .content h4::before {
+        content: "";
+        visibility: hidden;
+    }
+
+    .footer_section .row .col-3 .content .sign_up a {
+        font-size: 14px;
+        top: 7px;
+        right: 7px;
+    }
+
+    .footer_section .row .col-3 .content .contact-list li .contact-icon li i {
+        transition: 0.3s;
+        background: white;
+        color: orange;
+        border-radius: 50%;
+    }
+
+    .footer_section .row .col-3 .content .contact-list li .contact-icon li:hover i {
+        background: none;
+        border-radius: 10px;
+        color: white;
+        border: 1px solid white;
+    }
+}
+
+/* For mobile (phones) */
+@media (max-width: 576px) {
+
+    /* Your mobile-specific styles */
+    .header_section .navbar .head_left .link_home .logo,
+    .header_section .navbar .head_left .link_home .restaurant_Name {
+        font-size: 35px;
+    }
+
+    .header_section .navbar .head_right .main_menu .menu_list .menu .active .btn_active {
+        font-size: 14px;
+    }
+
+    .header_section .navbar .head_right .main_menu .btn_menu {
+        padding: 7px 9px;
+        font-size: 16px;
+    }
+
+    .header_section .navbar .head_right .main_menu .menu_list {
+        top: 65px;
+    }
+
+    .header_section .navbar .head_right .main_menu .menu_list .menu {
+        padding-left: 30px;
+    }
+
+    .hero_header h1 {
+        font-size: 60px;
+    }
+
+    .hero_header .breadcrumb .breadcrumb-item {
+        font-size: 16px;
+    }
+
+    .hero_header .breadcrumb a {
+        font-size: 16px;
+    }
+
+    .header_section .fixed_btn {
+        bottom: 5%;
+        right: 5%;
+    }
+
+    .about_section .row .col_6:first-of-type {
+        width: 100%;
+    }
+
+    .about_section .row .col_6 .about_item .inside_restaurant {
+        justify-content: center;
+    }
+
+    .about_section .row .col_6 .about_item .inside_restaurant .picture {
+        max-height: 150px;
+    }
+
+    .about_section .row .col_6 .about_item .inside_restaurant .picture:first-of-type img {
+        max-height: 150px;
+    }
+
+    .about_section .row .col_6 .about_item .inside_restaurant .picture:last-of-type img {
+        max-height: 150px;
+    }
+
+    .about_section .row .col_6 .about_item .inside_restaurant .picture:nth-child(2) img {
+        max-height: 150px;
+    }
+
+    .about_section .row .col_6 .about_item .inside_restaurant .picture:nth-child(3) img {
+        max-height: 150px;
+    }
+
+    .about_section .row .col_6 .about_item .content .blog_about {
+        font-size: 14px;
+    }
+
+    .about_section .row .col_6 .about_item .content .blog_about::after {
+        top: 14px;
+    }
+
+    .about_section .row .col_6 .about_item .content .title {
+        font-size: 30px;
+    }
+
+    .about_section .row .col_6 .about_item .content .row {
+        flex-direction: column;
+        align-items: start;
+        gap: 30px;
+    }
+
+    .about_section .row .col_6 .about_item .content .link_read_more a {
+        font-size: 14px;
+    }
+
+    .about_section .row .col_6 .about_item .content .row .experience .number .number_count {
+        font-size: 35px;
+    }
+
+    .about_section .row .col_6 .about_item .content .row .experience .letter span {
+        font-size: 12px;
+    }
+
+    .about_section .row .col_6 .about_item .content .row .experience .letter h5 {
+        font-size: 12px;
+    }
+
+    .about_section .row .col_6 .about_item .content .row .popular_chef .number .number_count {
+        font-size: 35px;
+    }
+
+    .about_section .row .col_6 .about_item .content .row .popular_chef .letter span {
+        font-size: 12px;
+    }
+
+    .about_section .row .col_6 .about_item .content .row .popular_chef .letter h5 {
+        font-size: 12px;
+        width: 100px;
+    }
+
+    .chef_area .row {
+        width: 310px;
+    }
+
+    .chef_area .blog_chef {
+        font-size: 14px;
+    }
+
+    .chef_area .blog_chef::before {
+        top: 15px;
+    }
+
+    .chef_area .blog_chef::after {
+        top: 15px;
+    }
+
+    .chef_area .title {
+        font-size: 25px;
+    }
+
+    .chef_area .row .col_3 .card .content .chef_name {
+        font-size: 18px;
+    }
+
+    .chef_area .row .col_3 .card .content .skill {
+        font-size: 14px;
+    }
+
+    .chef_area .row .col_3 .card .icon .list-icon .item .chef_link {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+    .chef_area .row .col_3 .card .chef_image img {
+        width: 200px;
+        height: 200px;
+    }
+
+
+    .footer_section .row .col-3 {
+        width: 100%;
+    }
+
+    .footer_section .row .col-3 .content {
+        width: 80%;
+        margin: auto;
+    }
+
+    .footer_section .row .col-3 .content h4 {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .footer_section .row .col-3 .content h4::before {
+        content: "";
+        visibility: visible;
+        position: absolute;
+        width: 50px;
+        height: 2px;
+        align-content: center;
+        top: 20px;
+        border-radius: 5px;
+        margin-left: -65px;
+    }
+
+    .footer_section .row .col-3 .content .contact-list li a {
+        font-size: 14px;
+    }
+
+    .footer_section .row .col-3 .content .company-list li a {
+        font-size: 14px;
+    }
+
+    .footer_section .row .col-3 .content .contact-list li .contact-icon li i {
+        transition: 0.3s;
+        background: white;
+        color: orange;
+        border-radius: 50%;
+    }
+
+    .footer_section .row .col-3 .content .contact-list li .contact-icon li:hover i {
+        background: none;
+        border-radius: 10px;
+        color: white;
+        border: 1px solid white;
+    }
+
+    .footer_section .row .col-3 .content .sign_up a {
+        font-size: 14px;
+        top: 7px;
+        right: 7px;
+    }
+
+    .footer_section .row .col-3 .content h5:first-of-type {
+        font-size: 14px;
+    }
+
+    .footer_section .row .col-3 .content h5:last-of-type {
+        font-size: 14px;
+    }
+
+    .footer_section .row .col-3 .content .contact-list li .contact-icon li i {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .footer_section .copyright span {
+        font-size: 12px;
+    }
+}

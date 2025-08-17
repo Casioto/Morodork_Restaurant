@@ -1,0 +1,177 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: bokor;
+    src: url(../font/Bokor/Bokor-Regular.ttf);
+}
+
+@font-face {
+    font-family: moulpali;
+    src: url(../font/Moulpali/Moulpali-Regular.ttf);
+}
+
+@font-face {
+    font-family: oswald;
+    src: url(../font/Oswald/Oswald-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: playwright_au_qLD;
+    src: url(../font/Playwrite_AU_QLD/PlaywriteAUQLD-VariableFont_wght.ttf);
+}
+body::selection {
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 205, 112);
+}
+body {
+    background:linear-gradient(to bottom, black, white);
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 5rem 1rem;
+}
+.blog_about{
+    color: orange;
+    font-family: oswald;
+    font-size: 20px;
+    position: relative;
+}
+.blog_about::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: orange;
+    align-content: center;
+    top: 20px;
+    margin-left: 15px;
+    border-radius: 5px;
+}
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: white;
+    font-family: oswald;
+    margin-top: 20px;
+    font-size: 40px;
+}
+.title span{
+    color: orange;
+    font-family: moulpali;
+}
+.title i{
+    color: orange;
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 2;
+    margin-bottom: 2rem;
+    color: white;
+    font-family: oswald;
+}
+
+.experience,
+.popular_chef {
+    display: inline-block;
+    margin-right: 3rem;
+    margin-bottom: 2rem;
+    font-family: oswald;
+}
+
+.number_count {
+    font-size: 2rem;
+    font-weight: bold;
+    color: orange;
+}
+.letter span{
+    color: white;
+}
+.letter h5 {
+    margin: 0;
+    font-size: 1rem;
+    color: white;
+}
+.link_read_more{
+    margin-top: 20px;
+}
+
+.link_read_more a {
+    text-decoration: none;
+    font-weight: bold;
+    color: orange;
+    position: relative;
+    font-family: oswald;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 10px;
+    transition: 0.5s;
+}
+.link_read_more a:hover{
+    background-color: white;
+}
+
+/* Full About Section */
+.about_full_section {
+    background-color: #fff;
+    padding: 4rem 1rem;
+}
+
+.section_title {
+    font-size: 2.25rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    font-family: oswald;
+}
+.section_title i{
+    color: orange;
+}
+.section_title span{
+    font-family: moulpali;
+    color: orange;
+}
+.sub_title {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: orange;
+    font-family: oswald;
+}
+.sub_title i{
+    font-size: 2rem;
+}
+.about_full_section p{
+    font-family: oswald;
+}
+
+.about_list {
+    padding-left: 1.5rem;
+    font-family: oswald;
+}
+
+.about_list li {
+    margin-bottom: 0.5rem;
+    list-style-type: none;
+}
+
+.about_list li::before {
+    content: "✔";
+    color: #e29500;
+    margin-right: 0.5rem;
+}
+
+.about_footer_note {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #fdf3e7;
+    border-left: 5px solid black;
+    color: white;
+    background-color: orange;
+    font-family: oswald;
+}

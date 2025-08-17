@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>មរតក - Menu</title>
+    <link rel="shortcut icon" href="assets/icons/bowl-food-solid-full.svg" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+</head>
+
+<body>
+    <header class="header_section" id="header_section">
+        <div class="container">
+            <nav class="navbar ">
+                <div class="head_left">
+                    <a class="link_home" href="index.html">
+                        <div class="logo">
+                            <i class="fa-solid fa-bowl-food"></i>
+                        </div>
+                        <h1 class="Restaurant_name">មរតក</h1>
+                    </a>
+                </div>
+                <div class="head_right">
+                    <ul class="navbar_nav">
+                        <li class="nav_item"><a class="nav_link" href="index.html">HOME</a></li>
+                        <li class="nav_item"><a class="nav_link" href="about.html">ABOUT</a></li>
+                        <li class="nav_item"><a class="nav_link" href="service.html">SERVICE</a></li>
+                        <li class="nav_item"><a class="nav_link" href="menu.html">MENU</a></li>
+                        <li class="nav_item"><a class="nav_link" href="contact.html">CONTACT</a></li>
+                        <li class="active"><a class="btn_active" href="login.html">LOGIN</a></li>
+                    </ul>
+                    <div class="main_menu">
+                        <label class="btn_menu " for="menu"><i class="fa-solid fa-bars"></i></label>
+                        <input class="checkbox" type="checkbox" id="menu" name="menu">
+                        <div class="menu_list">
+                            <ul class="menu">
+                                <li class="menu_item"><a class="menu_link" href="index.html">HOME</a></li>
+                                <li class="menu_item"><a class="menu_link" href="about.html">ABOUT</a></li>
+                                <li class="menu_item"><a class="menu_link" href="service.html">SERVICE</a></li>
+                                <li class="menu_item"><a class="menu_link" href="menu.html">MENU</a></li>
+                                <li class="menu_item"><a class="menu_link" href="contact.html">CONTACT</a></li>
+                                <li class="active"><a class="btn_active" href="login.html">LOGIN</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="hero_header">
+                <h1 class="animate__zoomIn">Food Menu</h1>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">HOME <span>/</span></a></li>
+                    <li class="breadcrumb-item"><a href="index.html">PAGES <span>/</span></a></li>
+                    <li class="breadcrumb-item active">MENU</li>
+                </ul>
+            </div>
+            <div class="fixed_btn">
+                <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </div>
+    </header>
+    <main class="main_section">
+        <div class="container">
+            <section class="menu_area">
+                <div class="container">
+                    <span class="blog_menu" data-aos="fade-right" data-aos-duration="1000">Food Menu</i></span>
+                    <h2 class="title" data-aos="fade-left" data-aos-duration="1000">Most Popular Items</h2>
+                    <div class="menu">
+                        <label class="category " for="option1">Cambodia Food <span class="icon"><i
+                                    class="fa-solid fa-burger"></i></span></label>
+                        <input class="category option" type="radio" id="option1" name="choice" value="1" checked>
+                        <div class="cambodia_food_list">
+                            <div class="row">
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/khmer-food/ក្តាមប្រៃ.jpg" alt="ក្តាមប្រៃ">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">ក្តាមប្រៃ</h3>
+                                                <span class="food_price">$7.50</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1000">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/khmer-food/ខ្យងស្ងោ.jpg" alt="ខ្យងស្ងោ">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">ខ្យងស្ងោ</h3>
+                                                <span class="food_price">$7.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/khmer-food/ឆាឡុកឡាក់.jpg" alt="ឆាឡុកឡាក់">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">ឆាឡុកឡាក់</h3>
+                                                <span class="food_price">$6.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/khmer-food/ឆាអង្រ្កង.jpg" alt="ឆាអង្រ្កង">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">ឆាអង្រ្កង</h3>
+                                                <span class="food_price">$7.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1000">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/khmer-food/ត្រីអាំង.jpg" alt="ត្រីអាំង">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">ត្រីអាំង</h3>
+                                                <span class="food_price">$7.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/khmer-food/នំបញ្ចុក.jpg" alt="នំបញ្ចុក">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">នំបញ្ចុក</h3>
+                                                <span class="food_price">$2.50</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/khmer-food/បាញ់ឆែវ.jpg" alt="បាញ់ឆែវ">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">បាញ់ឆែវ</h3>
+                                                <span class="food_price">$3.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1000">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/khmer-food/ប្រហុកអាំងជ្រុញ.jpg"
+                                                alt="ប្រហុកអាំងជ្រុញ">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">ប្រហុកអាំងជ្រុញ</h3>
+                                                <span class="food_price">$5.75</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/khmer-food/មាន់ដុត.jpg" alt="មាន់ដុត">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">មាន់ដុត</h3>
+                                                <span class="food_price">$10.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/khmer-food/សម្លកកូរ.jpg" alt="សម្លកកូរ">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">សម្លកកូរ</h3>
+                                                <span class="food_price">$4.50</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1000">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/khmer-food/សម្លការី.jpg" alt="សម្លការី">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">សម្លការី</h3>
+                                                <span class="food_price">$5.75</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/khmer-food/អាម៉ុក.jpg" alt="អាម៉ុក">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">អាម៉ុក</h3>
+                                                <span class="food_price">$7.25</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <label class="category" for="option2">Cambodia Dessert <span class="icon"><i
+                                    class="fa-solid fa-ice-cream"></i></span></label>
+                        <input class="category option" type="radio" id="option2" name="choice" value="2">
+                        <div class="cambodia_dessert_list">
+                            <div class="row">
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/khmer-dessert/នំអាកោត្នោត.jpg" alt="នំអាកោត្នោត">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">នំអាកោត្នោត</h3>
+                                                <span class="food_price">$1.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1000">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/khmer-dessert/បង្អែមចេកខ្ទិះ.jpg"
+                                            alt="បង្អែមចេកខ្ទិះ">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">បង្អែមចេកខ្ទិះ</h3>
+                                                <span class="food_price">$1.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/khmer-dessert/បបរសណ្តែកសៀង.jpg" alt="បបរសណ្តែកសៀង">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">បបរសណ្តែកសៀង</h3>
+                                                <span class="food_price">$1.25</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1000">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/khmer-dessert/នំផ្លែអាយ.jpg" alt="នំផ្លែអាយ">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">នំផ្លែអាយ</h3>
+                                                <span class="food_price">$1.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/khmer-dessert/នំកង.jpg" alt="នំកង">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">នំកង</h3>
+                                                <span class="food_price">$1.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1000">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/khmer-dessert/នំចក្កច័ន្ទ.jpg" alt="នំចក្កច័ន្ទ">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">នំចក្កច័ន្ទ</h3>
+                                                <span class="food_price">$1.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/khmer-dessert/បង្អែមសណ្តែកក្រហម.jpg"
+                                            alt="បង្អែមសណ្តែកក្រហម">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">បង្អែមសណ្តែកក្រហម</h3>
+                                                <span class="food_price">$3.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/khmer-dessert/នំពងអន្សម.jpg" alt="នំពងអន្សម">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">នំពងអន្សម</h3>
+                                                <span class="food_price">$1.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/khmer-dessert/នំលំអងចេក.jpg" alt="នំលំអងចេក">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">នំលំអងចេក</h3>
+                                                <span class="food_price">$1.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1000">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/khmer-dessert/នំស្លឹកស្រស់.jpg" alt="នំស្លឹកស្រស់">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">នំស្លឹកស្រស់</h3>
+                                                <span class="food_price">$1.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/khmer-dessert/នំអន្សម.jpg" alt="នំអន្សម">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">នំអន្សម</h3>
+                                                <span class="food_price">$2.50</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/khmer-dessert/សង់ខ្យាល្ពៅ.jpg" alt="សង់ខ្យាល្ពៅ">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">សង់ខ្យាល្ពៅ</h3>
+                                                <span class="food_price">$1.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <label class="category" for="option3">Europe Food <span class="icon"><i
+                                    class="fa-solid fa-burger"></i></span></label>
+                        <input class="category option" type="radio" id="option3" name="choice" value="3">
+                        <div class="europe_food_list">
+                            <div class="row">
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/europe-food/adjaruli-khachapuri.jpg"
+                                                alt="Adjaruli Khachapuri">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Adjaruli Khachapuri</h3>
+                                                <span class="food_price">$9.50</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1000">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/europe-food/bbq.jpg" alt="BBQ">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">BBQ</h3>
+                                                <span class="food_price">$20.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/europe-food/bulgogi-burritos .jpg"
+                                                alt="Bulgogi Burritos">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Bulgogi Burritos</h3>
+                                                <span class="food_price">$10.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/europe-food/burger.jpg" alt="Burger">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Burger</h3>
+                                                <span class="food_price">$12.50</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1000">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/europe-food/chicken fried.jpg" alt="Chicken Fried">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Chicken Fried</h3>
+                                                <span class="food_price">$10.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/europe-food/lasagna.jpg" alt="Lasagna">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Lasagna</h3>
+                                                <span class="food_price">$15.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/europe-food/mix-food.jpg" alt="Mix Food">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Mix Food</h3>
+                                                <span class="food_price">$25.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1000">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/europe-food/one-pan-taco-pasta.jpg"
+                                                alt="One Pan Taco Pasta">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">One Pan Taco Pasta</h3>
+                                                <span class="food_price">$12.50</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/europe-food/pizza.jpg" alt="Pizza">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Pizza</h3>
+                                                <span class="food_price">$15.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/europe-food/sausages.jpg" alt="Sausages">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Sausages</h3>
+                                                <span class="food_price">$10.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1000">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/europe-food/sour-rye-soup-recipe.jpg"
+                                                alt="Sour Rye Soup Recipe">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Sour Rye Soup Recipe</h3>
+                                                <span class="food_price">$9.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/europe-food/spaghetti .jpg" alt="Spaghetti">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Spaghetti</h3>
+                                                <span class="food_price">$15.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <label class="category" for="option4">Europe Dessert <span class="icon"><i
+                                    class="fa-solid fa-ice-cream"></i></span></label>
+                        <input class="category option" type="radio" id="option4" name="choice" value="4">
+                        <div class="europe_dessert_list">
+                            <div class="row">
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/europe-dessert/Cannoli.jpg" alt="Cannoli">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Cannoli</h3>
+                                                <span class="food_price">$7.50</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1000">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/europe-dessert/Caramel-Pudding.jpg"
+                                                alt="Caramel Pudding">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Caramel Pudding</h3>
+                                                <span class="food_price">$7.50</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/europe-dessert/Cherry-Pie.jpg" alt="Cherry Pie">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Cherry Pie</h3>
+                                                <span class="food_price">$9.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/europe-dessert/Croissants.jpg" alt="Croissants">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Croissants</h3>
+                                                <span class="food_price">$6.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1000">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/europe-dessert/Fruit-Bowl-with-a-scoop-of-white-dessert.jpg"
+                                                alt="Ice Cream">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Ice Cream</h3>
+                                                <span class="food_price">$9.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/europe-dessert/Jelly-Doughnut.jpg"
+                                                alt="Jelly Doughnut">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Jelly Doughnut</h3>
+                                                <span class="food_price">$4.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/europe-dessert/Kiwi-Cheesecake.jpg"
+                                                alt="Kiwi Cheesecake">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Kiwi Cheesecake</h3>
+                                                <span class="food_price">$9.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1000">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/europe-dessert/Mango-Parfait.jpg"
+                                                alt="Mango Parfait">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Mango Parfait</h3>
+                                                <span class="food_price">$8.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/europe-dessert/Mille-feuille.jpg"
+                                                alt="Mille Feuille">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Mille Feuille</h3>
+                                                <span class="food_price">$9.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/europe-dessert/Napoleon.jpg" alt="Napoleon">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Napoleon</h3>
+                                                <span class="food_price">$9.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1000">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/europe-dessert/Pancake-Cereal.jpg"
+                                                alt="Pancake Cereal">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Pancake Cereal</h3>
+                                                <span class="food_price">$10.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/europe-dessert/Yogurt-Bowl.jpg" alt="Yogurt Bowl">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Yogurt Bowl</h3>
+                                                <span class="food_price">$9.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <label class="category" for="option5">Drinks <span class="icon"><i
+                                    class="fa-solid fa-mug-saucer"></i></span></label>
+                        <input class="category option" type="radio" id="option5" name="choice" value="5">
+                        <div class="drinks_list">
+                            <div class="row">
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/drinks/Avocado-Smoothie.jpg" alt="Avocado Smoothie">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Avocado Smoothie</h3>
+                                                <span class="food_price">$7.50</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1000">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/drinks/Banana-Smoothie.jpg" alt="Banana Smoothie">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Banana Smoothie</h3>
+                                                <span class="food_price">$6.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/drinks/Blackberry-Mojito.jpg"
+                                                alt="Blackberry Mojito">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Blackberry Mojito</h3>
+                                                <span class="food_price">$9.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/drinks/Blueberry-Lavender-Lemonade.jpg"
+                                                alt="Blueberry Lavender Lemonade">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Blueberry Lavender Lemonade</h3>
+                                                <span class="food_price">$7.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1000">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/drinks/Chocolate-Smoothie.jpg"
+                                                alt="Chocolate Smoothie">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Chocolate Smoothie</h3>
+                                                <span class="food_price">$11.50</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/drinks/Dragon-Fruit-Smoothie.jpg"
+                                                alt="Dragon Fruit Smoothie">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Dragon Fruit Smoothie</h3>
+                                                <span class="food_price">$7.50</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/drinks/Kiwi-Smoothie.jpg" alt="Kiwi Smoothie">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Kiwi Smoothie</h3>
+                                                <span class="food_price">$11.50</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1000">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/drinks/Pineapple-mango-smoothie.jpg"
+                                                alt="Pineapple Mango Smoothie">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Pineapple Mango Smoothie</h3>
+                                                <span class="food_price">$6.50</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/drinks/Pomegranate-Smoothie.jpg"
+                                                alt="Pomegranate Smoothie">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Pomegranate Smoothie</h3>
+                                                <span class="food_price">$7.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/drinks/Strawberry-Smoothie.jpg"
+                                                alt="Strawberry Smoothie">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Strawberry Smoothie</h3>
+                                                <span class="food_price">$6.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1000">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/drinks/Watermelon-Juice.jpg" alt="Watermelon Juice">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Watermelon Juice</h3>
+                                                <span class="food_price">$4.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/drinks/Watermelon-smoothie.jpg"
+                                                alt="Watermelon Smoothie">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Watermelon Smoothie</h3>
+                                                <span class="food_price">$5.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <label class="category" for="option6">Cocktails <span class="icon"><i
+                                    class="fa-solid fa-martini-glass"></i></span></label>
+                        <input class="category option" type="radio" id="option6" name="choice" value="6">
+                        <div class="cocktails_list">
+                            <div class="row">
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/cocktails/Beer.jpg" alt="Beer">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Beer</h3>
+                                                <span class="food_price">$6.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1000">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/cocktails/Blue-Lagoon-Cocktail.jpg"
+                                                alt="Blue Lagoon Cocktail">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Blue Lagoon Cocktail</h3>
+                                                <span class="food_price">$10.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/cocktails/mix-cocktail.jpg" alt="Mix Cocktail">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Mix Cocktail</h3>
+                                                <span class="food_price">$12.25</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/cocktails/Cosmopolitan.jpg" alt="Cosmopolitan">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Cosmopolitan</h3>
+                                                <span class="food_price">$9.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1000">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/cocktails/Grapefruit-Cocktail.jpg"
+                                                alt="Grapefruit Cocktail">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Grapefruit Cocktail</h3>
+                                                <span class="food_price">$9.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/cocktails/Green-Refreshing-Soda.jpg"
+                                                alt="Green Refreshing Soda">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Green Refreshing Soda</h3>
+                                                <span class="food_price">$4.50</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/cocktails/Kiwi-Cocktail.jpg" alt="Kiwi Cocktail">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Kiwi Cocktail</h3>
+                                                <span class="food_price">$9.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1000">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/cocktails/Margarita.jpg" alt="Margarita">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Margarita</h3>
+                                                <span class="food_price">$10.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/cocktails/mocktail.jpg" alt="Mocktail">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Mocktail</h3>
+                                                <span class="food_price">$6.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/cocktails/Passion-Fruit-Cocktail.jpg"
+                                                alt="Passion Fruit Cocktail">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Passion Fruit Cocktail</h3>
+                                                <span class="food_price">$9.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1000">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/cocktails/Pink-Lemonade.jpg" alt="Pink Lemonade">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Pink Lemonade</h3>
+                                                <span class="food_price">$4.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food_item" data-aos="fade-up" data-aos-duration="1500">
+                                    <div class="card">
+                                        <div class="food_image">
+                                            <img src="assets/images/cocktails/Tequila-Sunrise.jpg"
+                                                alt="Tequila Sunrise">
+                                        </div>
+                                        <div class="food_content">
+                                            <div class="head_food">
+                                                <h3 class="food_name">Tequila Sunrise</h3>
+                                                <span class="food_price">$9.00</span>
+                                            </div>
+                                            <div class="food_number">
+                                                <button class="btn_decrease">-</button>
+                                                <input class="text_counter" type="text" value="0" readonly>
+                                                <button class="btn_increase">+</button>
+                                            </div>
+                                            <button class="order_btn" type="button">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="content">
+                        <h4>Company</h4>
+                        <ul class="company-list">
+                            <li><a href="about.html"><i class="fa-solid fa-bowl-food"></i> About Us</a></li>
+                            <li><a href="contact.html"><i class="fa-solid fa-bowl-food"></i> Contact Us</a></li>
+                            <li><a href="contact.html"><i class="fa-solid fa-bowl-food"></i> Reservation</a></li>
+                            <li><a href="#"><i class="fa-solid fa-bowl-food"></i> Privacy Policy</a></li>
+                            <li><a href="#"><i class="fa-solid fa-bowl-food"></i> Terms & Condition</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="content">
+                        <h4>Contact</h4>
+                        <ul class="contact-list">
+                            <li><a href="#"><i class="fa-solid fa-location-dot"></i> 168 Norton, Phnom Penh,
+                                    Cambodia</a></li>
+                            <li><a href="#"><i class="fa-solid fa-phone"></i> 010 584 267</a></li>
+                            <li><a href="#"><i class="fa-solid fa-envelope"></i> Sal_4u_gmail.com</a></li>
+                            <li><a href="#">
+                                    <ul class="contact-icon">
+                                        <li><i class="fa-brands fa-facebook-f"></i></li>
+                                        <li><i class="fa-brands fa-instagram"></i></li>
+                                        <li><i class="fa-brands fa-tiktok"></i></li>
+                                        <li><i class="fa-brands fa-twitter"></i></li>
+                                    </ul>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="content">
+                        <h4>Opening</h4>
+                        <h5>Monday - Saturday</h5>
+                        <span>9AM - 9PM</span>
+                        <h5> Sunday</h5>
+                        <span>10AM - 8PM</span>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="content">
+                        <h4>Newsletter</h4>
+                        <form class="sign_up">
+                            <input type="text" placeholder="Your Email" id="email">
+                            <a href="login.html" for="email">SIGN UP</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <span style="color:white">&copy; Morodok. all right reserved.</span>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        AOS.init()
+        AOS.refresh();
+    </script>
+</body>
+
+</html>

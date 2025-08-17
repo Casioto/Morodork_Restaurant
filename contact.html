@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>មរតក - Contact</title>
+    <link rel="shortcut icon" href="assets/icons/bowl-food-solid-full.svg" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="header_section" id="header_section">
+        <div class="container" style="max-width: 1300px;">
+            <nav class="navbar ">
+                <div class="head_left">
+                    <a class="link_home" href="index.html">
+                        <div class="logo">
+                            <i class="fa-solid fa-bowl-food"></i>
+                        </div>
+                        <h1 class="restaurant_name">មរតក</h1>
+                    </a>
+                </div>
+                <div class="head_right">
+                    <ul class="navbar_nav">
+                        <li class="nav_item"><a class="nav_link" href="index.html">HOME</a></li>
+                        <li class="nav_item"><a class="nav_link" href="about.html">ABOUT</a></li>
+                        <li class="nav_item"><a class="nav_link" href="service.html">SERVICE</a></li>
+                        <li class="nav_item"><a class="nav_link" href="menu.html">MENU</a></li>
+                        <li class="nav_item"><a class="nav_link" href="contact.html">CONTACT</a></li>
+                        <li class="active"><a class="btn_active" href="login.html">LOGIN</a></li>
+                    </ul>
+                    <div class="main_menu">
+                        <label class="btn_menu " for="menu"><i class="fa-solid fa-bars"></i></label>
+                        <input class="checkbox" type="checkbox" id="menu" name="menu">
+                        <div class="menu_list">
+                            <ul class="menu">
+                                <li class="menu_item"><a class="menu_link" href="index.html">HOME</a></li>
+                                <li class="menu_item"><a class="menu_link" href="about.html">ABOUT</a></li>
+                                <li class="menu_item"><a class="menu_link" href="service.html">SERVICE</a></li>
+                                <li class="menu_item"><a class="menu_link" href="menu.html">MENU</a></li>
+                                <li class="menu_item"><a class="menu_link" href="contact.html">CONTACT</a></li>
+                                <li class="active"><a class="btn_active" href="login.html">LOGIN</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="hero_header">
+                <h1 class="animate__zoomIn">Contact Us</h1>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">HOME <span>/</span></a></li>
+                    <li class="breadcrumb-item"><a href="index.html">PAGES <span>/</span></a></li>
+                    <li class="breadcrumb-item active">CONTACT</li>
+                </ul>
+            </div>
+            <div class="fixed_btn">
+                <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </div>
+    </header>
+    <main class="main_section">
+        <div class="container">
+            <section class="reservation_area">
+                <div class="container">
+                    <span class="blog_reservation" data-aos="fade-right" data-aos-duration="1000">Reservation</i></span>
+                    <h2 class="title" data-aos="fade-left" data-aos-duration="1000">Book A Table Online</h2>
+                    <div class="information_guest">
+                        <div class="row" data-aos="fade-up" data-aos-duration="1500">
+                            <div class="col_6">
+                                <form class="data_guest">
+                                    <div class="row">
+                                        <div class="col_12">
+                                            <label for="name">Your Name &emsp;&emsp;:</label>
+                                            <input id="name" type="text" placeholder="Enter Name">
+                                        </div>
+                                        <div class="col_12">
+                                            <label for="phone">Your Phone&emsp;&emsp;:</label>
+                                            <input class="phone" id="phone1" name="phone" type="tel">
+                                        </div>
+                                        <div class="col_12">
+                                            <label for="people">Your Members&emsp;:</label>
+                                            <input type="text" list="people-list" id="people"
+                                                placeholder="Enter Members">
+                                            <datalist id="people-list">
+                                                <option value="People 1">
+                                                <option value="People 2">
+                                                <option value="People 3">
+                                                <option value="People 4">
+                                                <option value="People 5">
+                                                <option value="People 6">
+                                                <option value="People 7">
+                                                <option value="People 8">
+                                                <option value="People 9">
+                                                <option value="People 10">
+                                            </datalist>
+                                        </div>
+                                        <div class="col_12">
+                                            <label for="email">Your Email &emsp;&emsp;:</label>
+                                            <input id="email" type="email" placeholder="Enter Email">
+                                        </div>
+                                        <div class="col_12">
+                                            <label for="date&time">Date & Time &emsp; :</label>
+                                            <input id="date&time" type="datetime-local">
+                                        </div>
+                                    </div>
+                                    <div class="request">
+                                        <textarea name="guest_request" placeholder="Special Request"></textarea>
+                                    </div>
+                                    <div class="btn_book">
+                                        <button class="btn_submit" type="submit">BOOK NOW</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col_6">
+                                <div class="location_restaurant">
+                                    <h2 class="map-title">Location For My Restaurant</h2>
+                                    <div class="map-container" data-aos="zoom-in" data-aos-duration="1000"
+                                        style="height: 300px;"">
+                                    <iframe
+                                        src="
+                                        https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15630.118076798463!2d104.9275456!3d11.5881108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310953fd9f9a51e9%3A0xc26eafcd2ed5ca29!2sNorton%20University!5e0!3m2!1sen!2skh!4v1722482000000!5m2!1sen!2skh"
+                                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="content">
+                        <h4>Company</h4>
+                        <ul class="company-list">
+                            <li><a href="about.html"><i class="fa-solid fa-bowl-food"></i> About Us</a></li>
+                            <li><a href="contact.html"><i class="fa-solid fa-bowl-food"></i> Contact Us</a></li>
+                            <li><a href="contact.html"><i class="fa-solid fa-bowl-food"></i> Reservation</a></li>
+                            <li><a href="#"><i class="fa-solid fa-bowl-food"></i> Privacy Policy</a></li>
+                            <li><a href="#"><i class="fa-solid fa-bowl-food"></i> Terms & Condition</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="content">
+                        <h4>Contact</h4>
+                        <ul class="contact-list">
+                            <li><a href="#"><i class="fa-solid fa-location-dot"></i> 168 Norton, Phnom Penh,
+                                    Cambodia</a></li>
+                            <li><a href="#"><i class="fa-solid fa-phone"></i> 010 584 267</a></li>
+                            <li><a href="#"><i class="fa-solid fa-envelope"></i> Sal_4u_gmail.com</a></li>
+                            <li><a href="#">
+                                    <ul class="contact-icon">
+                                        <li><i class="fa-brands fa-facebook-f"></i></li>
+                                        <li><i class="fa-brands fa-instagram"></i></li>
+                                        <li><i class="fa-brands fa-tiktok"></i></li>
+                                        <li><i class="fa-brands fa-twitter"></i></li>
+                                    </ul>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="content">
+                        <h4>Opening</h4>
+                        <h5>Monday - Saturday</h5>
+                        <span>9AM - 9PM</span>
+                        <h5> Sunday</h5>
+                        <span>10AM - 8PM</span>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="content">
+                        <h4>Newsletter</h4>
+                        <form class="sign_up">
+                            <input type="text" placeholder="Your Email" id="email">
+                            <a href="login.html" for="email">SIGN UP</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <span style="color:white">&copy; Morodok. all right reserved.</span>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/contact.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.min.js"></script>
+
+    <script>
+        AOS.init()
+        AOS.refresh();
+    </script>
+</body>
+
+</html>
