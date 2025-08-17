@@ -3430,6 +3430,9 @@ html {
     .feedback_clients .swiper .swiper-wrapper .swiper-slide .profile .client_name {
         font-size: 14px;
     }
+    .footer_section{
+        margin-top: 50px;
+    }
 
     .footer_section .row .col-3 {
         width: 100%;
