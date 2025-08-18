@@ -28,6 +28,7 @@ body::selection {
 }
 body {
     background:linear-gradient(to bottom, black, white);
+    overflow: hidden;
 }
 
 .container {
@@ -121,7 +122,6 @@ body {
 .about_full_section {
     background-color: #fff;
     padding: 4rem 1rem;
-    overflow: hidden;
 }
 
 .section_title {
