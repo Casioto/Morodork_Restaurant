@@ -121,6 +121,7 @@ body {
 .about_full_section {
     background-color: #fff;
     padding: 4rem 1rem;
+    overflow: hidden;
 }
 
 .section_title {
