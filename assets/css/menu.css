@@ -1716,7 +1716,7 @@ html {
         font-size: 14px;
     }
     .footer_section{
-        position: relative;
+        margin-top: 2500px;
     }
     .footer_section .row .col-3 {
         width: 100%;
